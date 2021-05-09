@@ -12,6 +12,7 @@
     <string name="beranda">Beranda</string>
     <string name="kondisi_lapangan">Kondisi Lapangan</string>
     <string name="akun">Akun</string>
+    <string name="pilih_instansi">Pilih Instansi</string>
     <string-array name="data_title">
         <item>@string/bangunan_rusak</item>
         <item>@string/jalur_cepat</item>
@@ -26,6 +27,16 @@
         <item>@drawable/ic_menu4</item>
 
     </array>
+    <string-array name="instansi_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_posko">20</string>
@@ -40,4 +51,6 @@
     <string name="buat_akun">Buat Akun</string>
     <string name="sudah_punya_akun">Sudah punya akun?</string>
     <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="no_hp">No Hp</string>
+    <string name="selanjutnya">Selanjutnya</string>
 </resources>

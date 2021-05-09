@@ -17,7 +17,7 @@ class LoginActivity : Activity() {
         setContentView(R.layout.activity_login)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnSubmit.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
         binding.btnNewAccount.setOnClickListener {

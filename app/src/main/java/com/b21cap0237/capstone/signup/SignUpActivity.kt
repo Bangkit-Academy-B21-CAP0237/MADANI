@@ -16,7 +16,13 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         supportActionBar?.hide()
         setContentView(binding.root)
-        loadFragment(FormSignUpFragment())
+        val fragmentManager = supportFragmentManager
+        val formSignUpFragment = FormSignUpFragment()
+        fragmentManager
+            .beginTransaction()
+            .add(R.id.container, formSignUpFragment)
+            .addToBackStack(null)
+            .commit()
     }
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()

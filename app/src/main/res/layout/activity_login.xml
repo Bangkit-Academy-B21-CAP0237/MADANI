@@ -44,17 +44,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_submit"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
             app:layout_constraintVertical_bias="0.278" />
 
         <ImageButton
-            android:id="@+id/btn_submit"
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/m_16"
             android:background="@drawable/bg_btn"
             android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner_instansi" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,12 +63,12 @@
             android:text="@string/masuk"
             android:textColor="@color/white"
             android:textSize="@dimen/m_16"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
-            app:layout_constraintEnd_toEndOf="@+id/btn_submit"
-            app:layout_constraintStart_toStartOf="@+id/btn_submit"
-            app:layout_constraintTop_toTopOf="@+id/btn_submit" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toTopOf="@+id/btn_login" />
         <EditText
-            android:id="@+id/edt_password"
+            android:id="@+id/spinner_instansi"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/m_16"

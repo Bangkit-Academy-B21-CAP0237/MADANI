@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageButton
-            android:id="@+id/btn_new_account"
+            android:id="@+id/btn_login"
             android:layout_width="245dp"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/m_16"
@@ -27,10 +27,10 @@
             android:text="Masuk"
             android:textColor="@color/red_dark"
             android:textSize="@dimen/m_16"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_new_account"
-            app:layout_constraintEnd_toEndOf="@+id/btn_new_account"
-            app:layout_constraintStart_toStartOf="@+id/btn_new_account"
-            app:layout_constraintTop_toTopOf="@+id/btn_new_account"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toTopOf="@+id/btn_login"
             app:layout_constraintVertical_bias="0.534" />
 
         <TextView
@@ -80,10 +80,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_password"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_instansi"
             app:layout_constraintVertical_bias="0.0" />
         <EditText
-            android:id="@+id/edt_password"
+            android:id="@+id/spinner_instansi"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/m_16"
