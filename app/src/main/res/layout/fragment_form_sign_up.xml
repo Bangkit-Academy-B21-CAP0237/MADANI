@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/m_24"
+    android:layout_margin="@dimen/m_24"
     tools:context=".login.LoginActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:id="@+id/btn_new_account"
             android:layout_width="245dp"
             android:layout_height="65dp"
-            android:layout_marginTop="@dimen/m_24"
+            android:layout_marginTop="@dimen/m_16"
             android:background="@drawable/bg_btn_white"
             android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfpro_bold"
-            android:text="@string/buat_akun"
+            android:text="Masuk"
             android:textColor="@color/red_dark"
             android:textSize="@dimen/m_16"
             app:layout_constraintBottom_toBottomOf="@+id/btn_new_account"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfpro_reguler"
             android:gravity="center"
-            android:text="@string/belum_punya_akun"
+            android:text="@string/sudah_punya_akun"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -54,19 +54,34 @@
             android:layout_marginTop="@dimen/m_16"
             android:background="@drawable/bg_btn"
             android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+            app:layout_constraintTop_toBottomOf="@+id/edt_token" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sfpro_bold"
-            android:text="@string/masuk"
+            android:text="@string/buat_akun"
             android:textColor="@color/white"
             android:textSize="@dimen/m_16"
             app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
             app:layout_constraintEnd_toEndOf="@+id/btn_submit"
             app:layout_constraintStart_toStartOf="@+id/btn_submit"
             app:layout_constraintTop_toTopOf="@+id/btn_submit" />
+        <EditText
+            android:id="@+id/edt_token"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/m_16"
+            android:background="@drawable/bg_edt"
+            android:hint="Token"
+            android:inputType="text"
+            android:padding="@dimen/m_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password"
+            app:layout_constraintVertical_bias="0.0" />
         <EditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
@@ -96,9 +111,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_name"
+            app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/m_16"
+            android:background="@drawable/bg_edt"
+            android:hint="@string/nama_lengkap"
+            android:inputType="text"
+            android:padding="@dimen/m_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintVertical_bias="0.0" />
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="80dp"
@@ -118,7 +147,7 @@
             android:layout_marginTop="@dimen/m_16"
             android:fontFamily="@font/sfpro_bold"
             android:gravity="center"
-            android:text="@string/masuk_untuk_melanjutkan"
+            android:text="@string/buat_akun"
             android:textColor="@color/black"
             android:textSize="@dimen/f_16"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +155,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.065" />
+            app:layout_constraintVertical_bias="0.028" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
