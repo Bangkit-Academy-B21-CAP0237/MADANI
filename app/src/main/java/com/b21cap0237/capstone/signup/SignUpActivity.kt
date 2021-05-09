@@ -21,7 +21,6 @@ class SignUpActivity : AppCompatActivity() {
         fragmentManager
             .beginTransaction()
             .add(R.id.container, formSignUpFragment)
-            .addToBackStack(null)
             .commit()
     }
     private fun loadFragment(fragment: Fragment) {

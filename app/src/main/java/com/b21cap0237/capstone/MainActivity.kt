@@ -7,7 +7,6 @@ import com.b21cap0237.capstone.akun.AkunFragment
 import com.b21cap0237.capstone.databinding.ActivityMainBinding
 import com.b21cap0237.capstone.home.HomeFragment
 import com.b21cap0237.capstone.kondisiLapangan.KondisiLapFragment
-import com.b21cap0237.capstone.signup.fragment.FormSignUpFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         fragmentManager
             .beginTransaction()
             .add(R.id.container, homeFragment)
-            .addToBackStack(null)
             .commit()
         binding.navigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
@@ -46,7 +44,6 @@ class MainActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
     }
 }
