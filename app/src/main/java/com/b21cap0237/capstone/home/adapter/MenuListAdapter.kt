@@ -42,7 +42,7 @@ class MenuListAdapter(private val ListMenu: ArrayList<ListMenu>): RecyclerView.A
     }
 
     override fun getItemCount(): Int {
-        return ListMenu.size
+        return 4
     }
     interface OnItemClickCallback {
         fun onItemClicked(data: ListMenu)

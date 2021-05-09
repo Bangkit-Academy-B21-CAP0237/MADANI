@@ -39,6 +39,20 @@ class FormInstansiFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 spinner.adapter = adapter
             }
         }
+
+        binding.btnSubmit.setOnClickListener {
+            val formPictFragment = FormPictFragment()
+            val mFragmentManager = fragmentManager
+            mFragmentManager?.beginTransaction()?.apply {
+                replace(
+                    R.id.container,
+                    formPictFragment,
+                    FormInstansiFragment::class.java.simpleName
+                )
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

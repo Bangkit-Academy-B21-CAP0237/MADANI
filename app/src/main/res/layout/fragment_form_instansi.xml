@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageButton
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="@dimen/m_16"
@@ -25,10 +25,10 @@
             android:text="@string/selanjutnya"
             android:textColor="@color/white"
             android:textSize="@dimen/m_16"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_login"
-            app:layout_constraintEnd_toEndOf="@+id/btn_login"
-            app:layout_constraintStart_toStartOf="@+id/btn_login"
-            app:layout_constraintTop_toTopOf="@+id/btn_login" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="@+id/btn_submit"
+            app:layout_constraintStart_toStartOf="@+id/btn_submit"
+            app:layout_constraintTop_toTopOf="@+id/btn_submit" />
 
         <Spinner
             android:id="@+id/spinner_instansi"

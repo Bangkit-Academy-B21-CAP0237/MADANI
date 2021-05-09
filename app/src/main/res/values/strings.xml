@@ -53,4 +53,6 @@
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="no_hp">No Hp</string>
     <string name="selanjutnya">Selanjutnya</string>
+    <string name="upload_foto">Upload Foto</string>
+    <string name="selesai">Selesai</string>
 </resources>

@@ -7,6 +7,7 @@ import com.b21cap0237.capstone.akun.AkunFragment
 import com.b21cap0237.capstone.databinding.ActivityMainBinding
 import com.b21cap0237.capstone.home.HomeFragment
 import com.b21cap0237.capstone.kondisiLapangan.KondisiLapFragment
+import com.b21cap0237.capstone.signup.fragment.FormSignUpFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,7 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        loadFragment(HomeFragment())
+        val fragmentManager = supportFragmentManager
+        val homeFragment = HomeFragment()
+        fragmentManager
+            .beginTransaction()
+            .add(R.id.container, homeFragment)
+            .addToBackStack(null)
+            .commit()
         binding.navigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.navigation_home -> {
