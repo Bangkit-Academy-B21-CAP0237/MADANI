@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".home.MainActivity">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginRight="@dimen/m_16"
     android:layout_marginTop="@dimen/m_16"
     android:layout_marginLeft="@dimen/m_16">
-
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sfpro_reguler"
+        android:fontFamily="@font/sfpro_bold"
         android:text="@string/selamat_datang"
         android:textColor="@color/black"
         android:textSize="@dimen/f_16"
@@ -24,6 +23,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_marginTop="@dimen/m_16"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_btn"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        tools:listitem="@layout/item_menu"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

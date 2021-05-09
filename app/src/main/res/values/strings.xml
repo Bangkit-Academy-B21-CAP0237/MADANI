@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Madani</string>
     <string name="selamat_datang">Selamat Datang</string>
+    <string name="jalur_cepat">Jalur Cepat</string>
+    <string name="lapor">Lapor</string>
+    <string name="info_detail">Info Detail</string>
 </resources>

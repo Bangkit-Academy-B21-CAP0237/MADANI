@@ -1,7 +1,8 @@
-package com.b21cap0237.capstone
+package com.b21cap0237.capstone.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.b21cap0237.capstone.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
