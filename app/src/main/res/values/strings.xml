@@ -1,7 +1,40 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Madani</string>
     <string name="selamat_datang">Selamat Datang</string>
-    <string name="jalur_cepat">Jalur Cepat</string>
+    <string name="jalur_cepat">Jalur\nCepat</string>
     <string name="lapor">Lapor</string>
-    <string name="info_detail">Info Detail</string>
+    <string name="bangunan_rusak">Bangunan\nRusak</string>
+    <string name="info_detail">Info\nDetail</string>
+    <string name="no">no</string>
+    <string name="at">at</string>
+    <string name="beranda">Beranda</string>
+    <string name="kondisi_lapangan">Kondisi Lapangan</string>
+    <string name="akun">Akun</string>
+    <string-array name="data_title">
+        <item>@string/bangunan_rusak</item>
+        <item>@string/jalur_cepat</item>
+        <item>@string/lapor</item>
+        <item>@string/info_detail</item>
+
+    </string-array>
+    <array name="data_ic">
+        <item>@drawable/ic_menu1</item>
+        <item>@drawable/ic_menu2</item>
+        <item>@drawable/ic_menu3</item>
+        <item>@drawable/ic_menu4</item>
+
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_posko">20</string>
+    <string name="dummy_relawan">150</string>
+    <string name="relawan">Relawan</string>
+    <string name="posko_terpadu">Posko terpadu</string>
+    <string name="masuk_untuk_melanjutkan">Masuk untuk Melanjutkan</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="masuk">Masuk</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
 </resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_light2"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m_16"
+        android:layout_marginTop="@dimen/m_16"
+        android:layout_marginRight="@dimen/m_16"
+        android:layout_marginBottom="@dimen/m_16">
+
+
+        <ImageView
+            android:id="@+id/bg_ket"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/bg_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_menu" />
+
+        <TextView
+            android:id="@+id/tv_posko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sfpro_bold"
+            android:text="@string/dummy_posko"
+            android:textColor="@color/black"
+            android:textSize="@dimen/f_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/bg_ket"
+            app:layout_constraintHorizontal_bias="0.203"
+            app:layout_constraintStart_toStartOf="@+id/bg_ket"
+            app:layout_constraintTop_toTopOf="@+id/bg_ket"
+            app:layout_constraintVertical_bias="0.152" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/posko_terpadu"
+            app:layout_constraintEnd_toEndOf="@+id/tv_posko"
+            app:layout_constraintStart_toStartOf="@+id/tv_posko"
+            app:layout_constraintTop_toBottomOf="@+id/tv_posko" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relawan"
+            app:layout_constraintEnd_toEndOf="@+id/tv_relawan"
+            app:layout_constraintStart_toStartOf="@+id/tv_relawan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_relawan" />
+        <TextView
+            android:id="@+id/tv_relawan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfpro_bold"
+            android:text="@string/dummy_relawan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/f_24"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_ket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.657"
+            app:layout_constraintStart_toStartOf="@+id/tv_posko"
+            app:layout_constraintTop_toTopOf="@+id/bg_ket"
+            app:layout_constraintVertical_bias="0.37" />
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfpro_bold"
+            android:text="@string/selamat_datang"
+            android:textColor="@color/black"
+            android:textSize="@dimen/f_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="@dimen/m_16"
+            android:background="@drawable/bg_btn"
+            android:padding="@dimen/m_16"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            tools:listitem="@layout/item_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
