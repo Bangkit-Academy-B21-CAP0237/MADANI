@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    nu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/map_utara"
+        android:title="@string/daerah_utara" />
+    <item
+        android:id="@+id/map_selatan"
+        android:title="@string/daerah_selatan" />
+    <item
+        android:id="@+id/map_timur"
+        android:title="@string/daerah_timur" />
+    <item
+        android:id="@+id/map_barat"
+        android:title="@string/daerah_barat" />
+</menu>

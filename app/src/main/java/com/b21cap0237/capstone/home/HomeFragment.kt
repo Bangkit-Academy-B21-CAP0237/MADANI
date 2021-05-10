@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.ActivityMainBinding
 import com.b21cap0237.capstone.databinding.FragmentHomeBinding
@@ -18,6 +19,10 @@ import com.b21cap0237.capstone.home.adapter.MenuListAdapter
 import com.b21cap0237.capstone.home.adapter.NotifListAdapter
 import com.b21cap0237.capstone.home.model.ListMenu
 import com.b21cap0237.capstone.home.model.Notif
+import com.b21cap0237.capstone.infodetail.InfoDetailActivity
+import com.b21cap0237.capstone.lapor.LaporActivity
+import com.b21cap0237.capstone.mapBangunan.MapBangunan
+import com.b21cap0237.capstone.mapJalur.MapJalurActivity
 
 
 class HomeFragment : Fragment() {
@@ -32,7 +37,7 @@ class HomeFragment : Fragment() {
     private lateinit var dataimgUrl:Array<String>
     private lateinit var datadateNotif:Array<String>
     private lateinit var datalocationNotif:Array<String>
-    private  lateinit var menuListAdapter: MenuListAdapter
+    private lateinit var menuListAdapter: MenuListAdapter
     private lateinit var notifListAdapter: NotifListAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,19 +63,22 @@ class HomeFragment : Fragment() {
         rvMenu.adapter = menuListAdapter
         menuListAdapter.setOnItemClickCallback(object :MenuListAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ListMenu) {
-                val intent: Intent
                 when(data.title){
                     getString(R.string.bangunan_rusak)->{
                         Toast.makeText(context, getString(R.string.bangunan_rusak), Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(context, MapBangunan::class.java))
                     }
                     getString(R.string.jalur_cepat)->{
                         Toast.makeText(context, getString(R.string.jalur_cepat), Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(context, MapJalurActivity::class.java))
                     }
                     getString(R.string.lapor)->{
                         Toast.makeText(context, getString(R.string.lapor), Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(context, LaporActivity::class.java))
                     }
                     getString(R.string.info_detail)->{
                         Toast.makeText(context, getString(R.string.info_detail), Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(context, InfoDetailActivity::class.java))
                     }
                 }
             }
