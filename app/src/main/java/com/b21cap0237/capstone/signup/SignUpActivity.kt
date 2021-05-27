@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.b21cap0237.capstone.R
-import com.b21cap0237.capstone.databinding.ActivityLoginBinding
 import com.b21cap0237.capstone.databinding.ActivitySignUpBinding
 import com.b21cap0237.capstone.signup.fragment.FormSignUpFragment
 
