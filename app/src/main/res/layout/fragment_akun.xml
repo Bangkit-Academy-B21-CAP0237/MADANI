@@ -173,7 +173,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bangkit Academy"
+            android:text="Mercury"
             android:layout_marginLeft="48dp"
             android:textSize="18dp" />
 
@@ -195,6 +195,7 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_edit_profile"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:background="@drawable/bg_btn_skip"
@@ -204,6 +205,7 @@
             android:drawableLeft="@drawable/ic_baseline_edit_24"/>
 
         <Button
+            android:id="@+id/btn_edit_pass"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
