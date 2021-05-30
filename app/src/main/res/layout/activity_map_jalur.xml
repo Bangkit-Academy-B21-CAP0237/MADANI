@@ -10,29 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_jalur_dilalui"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:padding="@dimen/m_16"
-            app:layout_constraintTop_toBottomOf="@+id/tv_jalur"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
 
-        <TextView
-            android:id="@+id/tv_jalur"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/m_16"
-            android:fontFamily="@font/sfpro_bold"
-            android:text="@string/jalur_yang_dapat_dilalui"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/legend3"
-            app:layout_constraintVertical_bias="0.0" />
         <TextView
             android:id="@+id/legend3"
             android:layout_width="wrap_content"
@@ -118,7 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/img_map"
             app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
             android:id="@+id/img_map"
             android:layout_width="match_parent"
             android:layout_height="500dp"

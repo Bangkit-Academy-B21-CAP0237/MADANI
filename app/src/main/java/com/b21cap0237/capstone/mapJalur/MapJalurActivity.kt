@@ -1,83 +1,96 @@
 package com.b21cap0237.capstone.mapJalur
 
+import android.graphics.drawable.Drawable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.ActivityMainBinding
 import com.b21cap0237.capstone.databinding.ActivityMapBangunanBinding
 import com.b21cap0237.capstone.databinding.ActivityMapJalurBinding
+import com.b21cap0237.capstone.mapBangunan.MapBangunan
 import com.b21cap0237.capstone.mapBangunan.adapter.KerusakanListAdapter
+import com.b21cap0237.capstone.mapBangunan.model.Bangunan
 import com.b21cap0237.capstone.mapBangunan.model.Kerusakan
+import com.b21cap0237.capstone.mapJalur.model.Jalur
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.transition.Transition
+import com.davemorrissey.labs.subscaleview.ImageSource
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+import java.io.File
 
 class MapJalurActivity : AppCompatActivity() {
+    companion object {
+        const val EXTRA_JALUR = "extra_jalur"
+
+    }
     private lateinit var binding: ActivityMapJalurBinding
-    private lateinit var kerusakanListAdapter: KerusakanListAdapter
-    private lateinit var datatitle:Array<String>
-    private lateinit var dataimgUrl:Array<String>
-    private lateinit var datadate:Array<String>
-    private lateinit var datalocation:Array<String>
-    private lateinit var dataContent:Array<String>
-    private var list: ArrayList<Kerusakan> = arrayListOf()
+    private lateinit var idJalur: String
+    private lateinit var namaKelurahan:String
+    private lateinit var gambarAfter:String
+    private lateinit var gambarBefore:String
+    private lateinit var circularProgressDrawable: CircularProgressDrawable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map_jalur)
         binding = ActivityMapJalurBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.title=getString(R.string.jalur_cepat)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.rvJalurDilalui.setHasFixedSize(true)
+        circularProgressDrawable = CircularProgressDrawable(this)
+        circularProgressDrawable.strokeWidth = 5f
+        circularProgressDrawable.centerRadius = 30f
+        circularProgressDrawable.start()
 
-        binding.rvJalurDilalui.layoutManager = LinearLayoutManager(this)
-        kerusakanListAdapter = KerusakanListAdapter(list)
-        list.addAll(getListKerusakan())
-        binding.rvJalurDilalui.adapter = kerusakanListAdapter
-        val url="https://www.orfeo-toolbox.org/CookBook/_images/QB_1_ortho_MV_C123456_CM.png"
-        Glide.with(this)
-            .load(url)
-            .into(binding.imgMap)
-        true
+        val data=intent.getParcelableExtra<Jalur>(EXTRA_JALUR) as Jalur
+        idJalur=data.idJalur
+        namaKelurahan=data.namaKelurahan
+        gambarAfter=data.gambarAfter
+        gambarBefore=data.gambarBefore
+        supportActionBar?.title=namaKelurahan
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater=menuInflater
-        inflater.inflate(R.menu.menu_map,menu)
+        inflater.inflate(R.menu.menu_utama,menu)
         return super.onCreateOptionsMenu(menu)
+    }
+    private fun showImage(url:String){
+        val uri= Uri.parse(url)
+        Glide.with(this)
+            .download(uri)
+            .into(object : SimpleTarget<File?>() {
+                override fun onLoadFailed(@Nullable errorDrawable: Drawable?) {
+                    super.onLoadFailed(errorDrawable)
+                    Log.d("load failed", "nothing")
+                }
+                override fun onResourceReady(resource: File, transition: Transition<in File?>?) {
+                    binding.imgMap.setImage(ImageSource.uri(resource.absolutePath))
+                    binding.imgMap.maxScale = 10f;
+                    binding.imgMap.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP)
+                }
+            })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.map_utara -> {
-                val url="https://storage.googleapis.com/road_resunet/mask_output_pre_disaster.png"
-                Glide.with(this)
-                    .load(url)
-                    .into(binding.imgMap)
+            R.id.before -> {
+                showImage(gambarBefore)
                 true
             }
-            R.id.map_selatan -> {
-                val url="https://www.rossedwards.co.uk/arma/QGIS/classify_linear.PNG"
-                Glide.with(this)
-                    .load(url)
-                    .into(binding.imgMap)
+            R.id.after -> {
+                showImage(gambarAfter)
                 true
             }
-            R.id.map_barat -> {
-                val url="https://www.orfeo-toolbox.org/CookBook/_images/sample-selection.png"
-                Glide.with(this)
-                    .load(url)
-                    .into(binding.imgMap)
-                true
-            }
-            R.id.map_timur -> {
-                val url="https://www.orfeo-toolbox.org/CookBook/_images/QB_1_ortho_MV_C123456_CM.png"
-                Glide.with(this)
-                    .load(url)
-                    .into(binding.imgMap)
-                true
-            }
+
             16908332->{
                 this.finish()
                 true
@@ -85,21 +98,5 @@ class MapJalurActivity : AppCompatActivity() {
             else -> true
         }
     }
-    private fun getListKerusakan(): ArrayList<Kerusakan> {
-        val listData= ArrayList<Kerusakan>()
-        datatitle = resources.getStringArray(R.array.title_notif)
-        dataimgUrl = resources.getStringArray(R.array.URL_notif)
-        datalocation = resources.getStringArray(R.array.location_notif)
-        dataContent=resources.getStringArray(R.array.content)
-        for(position in datatitle.indices){
-            val kerusakan= Kerusakan(
-                datatitle[position],
-                dataimgUrl[position],
-                dataContent[position],
-                datalocation[position]
-            )
-            listData.add(kerusakan)
-        }
-        return listData
-    }
+
 }

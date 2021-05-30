@@ -15,12 +15,6 @@ class BangunanViewModel:ViewModel() {
         val listItems = ArrayList<Bangunan>()
         val db = FirebaseFirestore.getInstance()
 
-        val user: MutableMap<String, Any> = HashMap()
-        user["first"] = "Alan"
-        user["middle"] = "Mathison"
-        user["last"] = "Turing"
-        user["born"] = 1912
-
         db.collection("bangunan")
             .get()
             .addOnCompleteListener { task ->

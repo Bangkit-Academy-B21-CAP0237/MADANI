@@ -74,7 +74,7 @@ class MapBangunan : AppCompatActivity() {
                 override fun onResourceReady(resource: File, transition: Transition<in File?>?) {
                     binding.imgMap.setImage(ImageSource.uri(resource.absolutePath))
                     binding.imgMap.maxScale = 10f;
-                    binding.imgMap.setMinimumScaleType(SCALE_TYPE_CUSTOM)
+                    binding.imgMap.setMinimumScaleType(SCALE_TYPE_CENTER_CROP)
                 }
             })
     }
