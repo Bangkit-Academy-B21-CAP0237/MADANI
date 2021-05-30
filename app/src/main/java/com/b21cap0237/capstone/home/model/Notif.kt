@@ -9,5 +9,6 @@ data class Notif(
     val title:String,
     val imgUrl:String,
     val dateNotif:String,
-    val locationNotif:String
+    val locationNotif:String,
+    val kontent:String
 ):Parcelable

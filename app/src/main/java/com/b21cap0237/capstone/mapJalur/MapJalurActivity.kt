@@ -51,7 +51,7 @@ class MapJalurActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.map_utara -> {
-                val url="https://www.orfeo-toolbox.org/CookBook/_images/QB_1_ortho_MV_C123456_CM.png"
+                val url="https://storage.googleapis.com/road_resunet/mask_output_pre_disaster.png"
                 Glide.with(this)
                     .load(url)
                     .into(binding.imgMap)

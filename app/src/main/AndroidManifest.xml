@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".akun.AccountActivity"></activity>
+        <activity android:name=".mapJalur.ListJalurActivity"></activity>
+        <activity android:name=".mapBangunan.ListBangunanActivity" />
+        <activity android:name=".akun.AccountActivity" />
         <activity android:name=".OnBoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +29,7 @@
         <activity android:name=".lapor.LaporActivity" />
         <activity android:name=".mapJalur.MapJalurActivity" />
         <activity android:name=".signup.SignUpActivity" />
-        <activity android:name=".login.LoginActivity"></activity>
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".mapBangunan.MapBangunan" />
         <activity android:name=".MainActivity" />
 

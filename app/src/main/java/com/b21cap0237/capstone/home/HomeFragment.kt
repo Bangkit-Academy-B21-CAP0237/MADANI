@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,9 +20,13 @@ import com.b21cap0237.capstone.home.adapter.MenuListAdapter
 import com.b21cap0237.capstone.home.adapter.NotifListAdapter
 import com.b21cap0237.capstone.home.model.ListMenu
 import com.b21cap0237.capstone.home.model.Notif
+import com.b21cap0237.capstone.home.viewmodel.HomeViewModel
 import com.b21cap0237.capstone.infodetail.InfoDetailActivity
 import com.b21cap0237.capstone.lapor.LaporActivity
+import com.b21cap0237.capstone.mapBangunan.ListBangunanActivity
 import com.b21cap0237.capstone.mapBangunan.MapBangunan
+import com.b21cap0237.capstone.mapBangunan.viewmodel.BangunanViewModel
+import com.b21cap0237.capstone.mapJalur.ListJalurActivity
 import com.b21cap0237.capstone.mapJalur.MapJalurActivity
 
 
@@ -39,6 +44,8 @@ class HomeFragment : Fragment() {
     private lateinit var datalocationNotif:Array<String>
     private lateinit var menuListAdapter: MenuListAdapter
     private lateinit var notifListAdapter: NotifListAdapter
+
+    private lateinit var homeViewModel: HomeViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -57,20 +64,22 @@ class HomeFragment : Fragment() {
         binding= FragmentHomeBinding.bind(view)
         rvMenu=binding.rvMenu
         rvMenu.setHasFixedSize(true)
-        rvMenu.layoutManager = GridLayoutManager(context,4)
+        rvMenu.layoutManager = GridLayoutManager(context,3)
         menuListAdapter = MenuListAdapter(list)
         list.addAll(getListMenu())
         rvMenu.adapter = menuListAdapter
+
+        homeViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(HomeViewModel::class.java)
         menuListAdapter.setOnItemClickCallback(object :MenuListAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ListMenu) {
                 when(data.title){
                     getString(R.string.bangunan_rusak)->{
                         Toast.makeText(context, getString(R.string.bangunan_rusak), Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(context, MapBangunan::class.java))
+                        startActivity(Intent(context, ListBangunanActivity::class.java))
                     }
                     getString(R.string.jalur_cepat)->{
                         Toast.makeText(context, getString(R.string.jalur_cepat), Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(context, MapJalurActivity::class.java))
+                        startActivity(Intent(context, ListJalurActivity::class.java))
                     }
                     getString(R.string.lapor)->{
                         Toast.makeText(context, getString(R.string.lapor), Toast.LENGTH_SHORT).show()
@@ -84,31 +93,19 @@ class HomeFragment : Fragment() {
             }
         })
 
-        binding.rvNotif.setHasFixedSize(true)
-        binding.rvNotif.layoutManager=LinearLayoutManager(context)
-        notifListAdapter = NotifListAdapter(listNotif)
-        listNotif.addAll(getListNotif())
-        binding.rvNotif.adapter=notifListAdapter
+        showNotif()
     }
-    private fun getListNotif(): ArrayList<Notif> {
-        val listData= ArrayList<Notif>()
-        dataid = resources.getStringArray(R.array.id_notif)
-        datatitleNotif = resources.getStringArray(R.array.title_notif)
-        dataimgUrl = resources.getStringArray(R.array.URL_notif)
-        datadateNotif = resources.getStringArray(R.array.date_notif)
-        datalocationNotif = resources.getStringArray(R.array.location_notif)
-        for(position in dataTitle.indices){
-            val notif=Notif(
-                dataid[position],
-                datatitleNotif[position],
-                dataimgUrl[position],
-                datadateNotif[position],
-                datalocationNotif[position]
-            )
-            listData.add(notif)
-        }
-        return listData
+    private fun  showNotif(){
+        homeViewModel.setNotif()
+        homeViewModel.getNotif().observe(viewLifecycleOwner,{data->
+            binding.rvNotif.setHasFixedSize(true)
+            binding.rvNotif.layoutManager=LinearLayoutManager(context)
+            notifListAdapter = NotifListAdapter(data)
+            binding.rvNotif.adapter=notifListAdapter
+        })
+
     }
+
     private fun getListMenu(): ArrayList<ListMenu> {
         val listMenu= ArrayList<ListMenu>()
         dataTitle = resources.getStringArray(R.array.data_title)

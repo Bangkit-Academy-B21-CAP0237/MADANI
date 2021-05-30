@@ -57,14 +57,14 @@ But I must explain to you how all this mistaken idea of denouncing pleasure and 
         <item>@string/bangunan_rusak</item>
         <item>@string/jalur_cepat</item>
         <item>@string/lapor</item>
-        <item>@string/info_detail</item>
+        <!--        <item>@string/info_detail</item>-->
 
     </string-array>
     <array name="data_ic">
         <item>@drawable/ic_menu1</item>
         <item>@drawable/ic_menu2</item>
         <item>@drawable/ic_menu3</item>
-        <item>@drawable/ic_menu4</item>
+        <!--        <item>@drawable/ic_menu4</item>-->
 
     </array>
     <string-array name="instansi_array">
@@ -106,4 +106,7 @@ But I must explain to you how all this mistaken idea of denouncing pleasure and 
     <string name="ket1">Keterangan 1</string>
     <string name="kerusakan_parah">Kerusakan Parah</string>
     <string name="jalur_yang_dapat_dilalui">Jalur Yang Dapat Dilalui</string>
+    <string name="daftar_kelurahan">Daftar Kelurahan</string>
+    <string name="gambar_asli">Gambar Asli</string>
+    <string name="gambar_klasifikasi">Gambar Klasifikasi</string>
 </resources>
