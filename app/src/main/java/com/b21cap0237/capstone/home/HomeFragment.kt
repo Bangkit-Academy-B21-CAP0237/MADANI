@@ -3,6 +3,7 @@ package com.b21cap0237.capstone.home
 import android.content.Intent
 import android.content.res.TypedArray
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -28,20 +29,19 @@ import com.b21cap0237.capstone.mapBangunan.MapBangunan
 import com.b21cap0237.capstone.mapBangunan.viewmodel.BangunanViewModel
 import com.b21cap0237.capstone.mapJalur.ListJalurActivity
 import com.b21cap0237.capstone.mapJalur.MapJalurActivity
+import com.b21cap0237.capstone.notif.NotifDetailActivity
+import com.b21cap0237.capstone.notif.NotifDetailActivity.Companion.EXTRA_NOTIF
 
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var rvMenu: RecyclerView
     private var list: ArrayList<ListMenu> = arrayListOf()
-    private var listNotif: ArrayList<Notif> = arrayListOf()
+
     private lateinit var dataTitle: Array<String>
     private lateinit var dataIc: TypedArray
-    private lateinit var dataid:Array<String>
-    private lateinit var datatitleNotif:Array<String>
-    private lateinit var dataimgUrl:Array<String>
-    private lateinit var datadateNotif:Array<String>
-    private lateinit var datalocationNotif:Array<String>
+
+
     private lateinit var menuListAdapter: MenuListAdapter
     private lateinit var notifListAdapter: NotifListAdapter
 
@@ -102,6 +102,16 @@ class HomeFragment : Fragment() {
             binding.rvNotif.layoutManager=LinearLayoutManager(context)
             notifListAdapter = NotifListAdapter(data)
             binding.rvNotif.adapter=notifListAdapter
+
+            notifListAdapter.setOnItemClickCallback(object :NotifListAdapter.OnItemClickCallback{
+                override fun onItemClicked(data: Notif) {
+                    Log.d("showNotif", data.toString())
+                    Toast.makeText(context, data.title, Toast.LENGTH_SHORT).show()
+                    val intent= Intent(context, NotifDetailActivity::class.java)
+                    intent.putExtra(EXTRA_NOTIF,data)
+                    startActivity(intent)
+                }
+            })
         })
 
     }

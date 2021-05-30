@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".mapJalur.ListJalurActivity"></activity>
+        <activity
+            android:name=".notif.NotifDetailActivity"
+            android:label="@string/title_activity_notif_detail"
+            android:theme="@style/Theme.MyApplication.NoActionBar"></activity>
+        <activity android:name=".mapJalur.ListJalurActivity" />
         <activity android:name=".mapBangunan.ListBangunanActivity" />
         <activity android:name=".akun.AccountActivity" />
         <activity android:name=".OnBoardingActivity">

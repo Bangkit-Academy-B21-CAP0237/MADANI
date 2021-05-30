@@ -26,7 +26,7 @@ class HomeViewModel: ViewModel() {
                         val imgUrl=document["imgUrl"].toString()
                         val dateNotif=document["dateNotif"].toString()
                         val locationNotif=document["locationNotif"].toString()
-                        val kontent=document["kontent"].toString()
+                        val kontent=document["konten"].toString()
                         val notif=Notif(
                             id,
                             title,

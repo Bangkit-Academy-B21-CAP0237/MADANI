@@ -31,7 +31,6 @@ class MapBangunan : AppCompatActivity() {
 
     companion object {
         const val EXTRA_BANGUNAN = "extra_bangunan"
-
     }
 
     private lateinit var idBangunan: String
