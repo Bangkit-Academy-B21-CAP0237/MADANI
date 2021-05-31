@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C3C1C1"
     tools:context=".mapBangunan.MapBangunan">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,29 +12,7 @@
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/legend3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/ket1"
-            app:layout_constraintBottom_toBottomOf="@+id/kuning"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toEndOf="@+id/kuning"
-            app:layout_constraintTop_toTopOf="@+id/kuning"
-            app:layout_constraintVertical_bias="0.647" />
 
-        <TextView
-            android:id="@+id/kuning"
-            android:layout_width="71dp"
-            android:layout_height="2dp"
-            android:layout_margin="@dimen/m_16"
-            android:background="@color/yellow"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/merah"
-            app:layout_constraintVertical_bias="0.0" />
         <TextView
             android:id="@+id/legend2"
             android:layout_width="wrap_content"
@@ -52,7 +31,7 @@
             android:layout_width="71dp"
             android:layout_height="2dp"
             android:layout_margin="@dimen/m_16"
-            android:background="@color/red_dark"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hitem"
@@ -62,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/ket1"
+            android:text="@string/daerah_sekitar"
             app:layout_constraintBottom_toBottomOf="@+id/hitem"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
