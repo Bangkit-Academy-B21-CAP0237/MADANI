@@ -9,6 +9,8 @@ import com.b21cap0237.capstone.home.model.ListMenu
 import com.b21cap0237.capstone.home.model.Notif
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import java.sql.Date
+import java.sql.Timestamp
 
 class NotifListAdapter(private val ListNotif: ArrayList<Notif>): RecyclerView.Adapter<NotifListAdapter.ListViewHolder>() {
     private var onItemClickCallback: NotifListAdapter.OnItemClickCallback? = null
@@ -27,6 +29,8 @@ class NotifListAdapter(private val ListNotif: ArrayList<Notif>): RecyclerView.Ad
                 }
                 tvTitleNotif.text=notif.title
                 tvLocation.text=notif.locationNotif
+
+                tvdate.text=notif.dateNotif
             itemView.setOnClickListener{
                 onItemClickCallback?.onItemClicked(notif)
             }

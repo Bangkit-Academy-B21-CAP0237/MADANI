@@ -10,64 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_kerusakan"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:padding="@dimen/m_16"
-            app:layout_constraintTop_toBottomOf="@+id/tv_kerusakan"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/tv_kerusakan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/m_16"
-            android:fontFamily="@font/sfpro_bold"
-            android:text="@string/kerusakan_parah"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/legend3"
-            app:layout_constraintVertical_bias="0.0" />
-        <TextView
-            android:id="@+id/legend3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/ket1"
-            app:layout_constraintBottom_toBottomOf="@+id/kuning"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toEndOf="@+id/kuning"
-            app:layout_constraintTop_toTopOf="@+id/kuning"
-            app:layout_constraintVertical_bias="0.647" />
-
-        <TextView
-            android:id="@+id/kuning"
-            android:layout_width="71dp"
-            android:layout_height="2dp"
-            android:layout_margin="@dimen/m_16"
-            android:background="@color/yellow"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/merah"
-            app:layout_constraintVertical_bias="0.0" />
         <TextView
             android:id="@+id/legend2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/ket1"
+            android:text="Bangunan Rusak"
             app:layout_constraintBottom_toBottomOf="@+id/merah"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.362"
             app:layout_constraintStart_toEndOf="@+id/merah"
             app:layout_constraintTop_toTopOf="@+id/merah"
-            app:layout_constraintVertical_bias="0.647" />
+            app:layout_constraintVertical_bias="0.764" />
 
         <TextView
             android:id="@+id/merah"
@@ -79,25 +33,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hitem"
             app:layout_constraintVertical_bias="0.0" />
+
         <TextView
             android:id="@+id/legend1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/ket1"
+            android:text="@string/bangunan_tidak_rusak"
             app:layout_constraintBottom_toBottomOf="@+id/hitem"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.448"
             app:layout_constraintStart_toEndOf="@+id/hitem"
             app:layout_constraintTop_toTopOf="@+id/hitem"
-            app:layout_constraintVertical_bias="0.647" />
+            app:layout_constraintVertical_bias="0.764" />
 
         <TextView
             android:id="@+id/hitem"
             android:layout_width="71dp"
             android:layout_height="2dp"
             android:layout_margin="@dimen/m_16"
-            android:background="@color/black"
+            android:background="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -118,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/img_map"
             app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
             android:id="@+id/img_map"
             android:layout_width="match_parent"
             android:layout_height="500dp"

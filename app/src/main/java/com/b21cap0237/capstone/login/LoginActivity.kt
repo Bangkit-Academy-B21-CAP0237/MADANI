@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
         val fragmentManager = supportFragmentManager
         val loginFragment = LoginFragment()
         fragmentManager
