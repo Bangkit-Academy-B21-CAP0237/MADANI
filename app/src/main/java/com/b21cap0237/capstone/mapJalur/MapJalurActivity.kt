@@ -56,7 +56,7 @@ class MapJalurActivity : AppCompatActivity() {
         gambarAfter=data.gambarAfter
         gambarBefore=data.gambarBefore
         supportActionBar?.title=namaKelurahan
-
+        showImage(gambarBefore)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater=menuInflater
