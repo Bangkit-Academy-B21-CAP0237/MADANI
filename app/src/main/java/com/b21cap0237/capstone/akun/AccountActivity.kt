@@ -2,11 +2,11 @@ package com.b21cap0237.capstone.akun
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.ActivityAccountBinding
-import com.b21cap0237.capstone.databinding.ActivityLoginBinding
-import com.b21cap0237.capstone.login.LoginFragment
 
 class AccountActivity : AppCompatActivity() {
 
@@ -16,6 +16,10 @@ class AccountActivity : AppCompatActivity() {
         setContentView(R.layout.activity_account)
         accountBinding = ActivityAccountBinding.inflate(layoutInflater)
         setContentView(accountBinding.root)
+
+        supportActionBar?.title=getString(R.string.hal_profile)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val fragmentManager = supportFragmentManager
         val akunFragment = AkunFragment()
         fragmentManager
@@ -28,5 +32,20 @@ class AccountActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+
+            16908332->{
+                this.finish()
+                true
+            }
+            else -> true
+        }
     }
 }

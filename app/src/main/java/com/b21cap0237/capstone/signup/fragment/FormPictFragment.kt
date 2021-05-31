@@ -15,6 +15,7 @@ import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentFormPictBinding
 import com.b21cap0237.capstone.databinding.FragmentFormSignUpBinding
+import com.b21cap0237.capstone.login.LoginActivity
 
 
 class FormPictFragment : Fragment() {
@@ -43,7 +44,7 @@ class FormPictFragment : Fragment() {
             Toast.makeText(context, "Proses Upload", Toast.LENGTH_SHORT).show()
         }
         binding.btnSubmit.setOnClickListener {
-            startActivity(Intent(context,MainActivity::class.java))
+            startActivity(Intent(context,LoginActivity::class.java))
         }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
