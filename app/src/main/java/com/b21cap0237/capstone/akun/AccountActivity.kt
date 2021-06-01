@@ -18,7 +18,6 @@ class AccountActivity : AppCompatActivity() {
         setContentView(accountBinding.root)
 
         supportActionBar?.title=getString(R.string.hal_profile)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val fragmentManager = supportFragmentManager
         val akunFragment = AkunFragment()
