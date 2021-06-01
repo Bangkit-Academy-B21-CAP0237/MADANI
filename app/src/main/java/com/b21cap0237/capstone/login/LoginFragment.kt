@@ -27,6 +27,7 @@ class LoginFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener {
             startActivity(Intent(activity,MainActivity::class.java))
+            activity?.finish()
         }
         binding.btnNewAccount.setOnClickListener {
             startActivity(Intent(activity, SignUpActivity::class.java))
