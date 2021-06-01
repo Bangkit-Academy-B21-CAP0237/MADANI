@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/m_8"
+    android:padding="@dimen/m_16"
     android:background="@drawable/bg_card">
 
 
@@ -12,7 +13,7 @@
         android:id="@+id/tvdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/m_4"
+        android:text="@string/dummy_date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv_title_notif"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_notif"
@@ -22,9 +23,8 @@
         android:id="@+id/tv_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/m_4"
-        android:text="@string/dummy_location"
         android:autoSizeTextType="uniform"
+        android:text="@string/dummy_location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,39 +32,51 @@
         app:layout_constraintTop_toBottomOf="@+id/tvdate"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/newgif"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_notif"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_title_notif"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/m_8"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="@dimen/m_16"
+        android:layout_marginTop="4dp"
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/sfpro_bold"
         android:text="@string/dummy_title"
         android:textColor="@color/black"
         android:textSize="@dimen/f_14"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/img_notif"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:targetApi="o" />
 
-    <ImageView
-        android:id="@+id/img_notif"
-        android:layout_width="79dp"
-        android:layout_height="69dp"
-        android:layout_margin="@dimen/m_16"
-        android:src="@drawable/banjir"
-        android:foreground="@drawable/bg_radius_img"
-        android:background="@drawable/bg_radius_img"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintCircleRadius="@dimen/m_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:cardCornerRadius="@dimen/m_16"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location">
+        <ImageView
+            android:id="@+id/img_notif"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/m_4"
+            android:background="@drawable/bg_radius_img"
+            android:foreground="@drawable/bg_radius_img"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banjir"
+             />
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

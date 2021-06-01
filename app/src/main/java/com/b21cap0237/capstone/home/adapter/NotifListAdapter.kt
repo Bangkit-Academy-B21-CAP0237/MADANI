@@ -34,6 +34,14 @@ class NotifListAdapter(private val ListNotif: ArrayList<Notif>): RecyclerView.Ad
                             .error(R.drawable.ic_error)).override(155,155)
                         .into(it)
                 }
+
+                newgif?.let {
+                    Glide.with(itemView.context)
+                        .load(R.drawable.resource_new)
+                        .apply( RequestOptions.placeholderOf(circularProgressDrawable)
+                            .error(R.drawable.ic_error)).override(155,155)
+                        .into(it)
+                }
                 tvTitleNotif.text=notif.title
                 tvLocation.text=notif.locationNotif
 
