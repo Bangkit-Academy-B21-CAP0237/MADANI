@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentFormProfilBinding
+import kotlinx.android.synthetic.main.fragment_halaman_ketiga.*
 
 
 class FormProfilFragment : Fragment() {
@@ -21,10 +22,18 @@ class FormProfilFragment : Fragment() {
     private var imageUri: Uri? = null
     private lateinit var profilBinding: FragmentFormProfilBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.edit_profile)
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_form_profil, container, false)
     }
@@ -33,7 +42,7 @@ class FormProfilFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         profilBinding = FragmentFormProfilBinding.bind(view)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val spinner = profilBinding.edtInstansi
         context?.let {
             ArrayAdapter.createFromResource(
@@ -65,11 +74,11 @@ class FormProfilFragment : Fragment() {
         }
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 
             16908332->{
+                activity?.onBackPressed()
                 true
             }
             else -> true

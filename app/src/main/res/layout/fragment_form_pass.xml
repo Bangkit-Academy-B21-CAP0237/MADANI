@@ -6,9 +6,11 @@
     android:padding="16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".akun.FormPassFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
             android:id="@+id/image_secure"
             android:layout_width="310dp"

@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
-
     }
 
     private fun loadFragment(fragment: Fragment) {
@@ -47,4 +46,5 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container, fragment)
         transaction.commit()
     }
+
 }
