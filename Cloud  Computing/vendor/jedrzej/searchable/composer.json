@@ -1,0 +1,41 @@
+{
+  "name": "jedrzej/searchable",
+  "description": "Searchable trait for Laravel's Eloquent models - filter your models using request parameters",
+  "keywords": [
+    "laravel",
+    "search",
+    "searchable",
+    "filter",
+    "eloquent",
+    "model",
+    "api",
+    "request"
+  ],
+  "homepage": "https://github.com/jedrzej/searchable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jędrzej Kuryło",
+      "email": "jedrzej.kurylo@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/database": "*",
+    "illuminate/support": "*"
+  },
+  "require-dev": {
+    "codeception/codeception": "2.*",
+    "codeception/specify": "*",
+    "codeception/assert-throws": "*"
+  },
+  "suggest": {
+    "jedrzej/sortable": "Allows sorting your models using request parameters",
+    "jedrzej/withable": "Allows eager loading of relations using request parameters"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jedrzej\\": "src/Jedrzej/",
+      "Illuminate\\": "vendor/laravel/framework/src/Illuminate/"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "jedrzej/withable",
+  "description": "Withable trait for Laravel's Eloquent models",
+  "keywords": [
+    "laravel",
+    "eager",
+    "load",
+    "eloquent",
+    "api",
+    "request"
+  ],
+  "homepage": "https://github.com/jedrzej/withable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jędrzej Kuryło",
+      "email": "jedrzej.kurylo@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/database": "*",
+    "illuminate/support": "*"
+  },
+  "require-dev": {
+    "codeception/codeception": "2.*",
+    "codeception/specify": "*",
+    "codeception/assert-throws": "*"
+  },
+  "suggest": {
+    "jedrzej/searchable": "Allows filtering your models using request parameters",
+    "jedrzej/sortable": "Allows sorting your models using request parameters"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jedrzej\\": "src/Jedrzej/",
+      "Illuminate\\": "vendor/laravel/framework/src/Illuminate/"
+    }
+  }
+}
