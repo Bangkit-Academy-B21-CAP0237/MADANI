@@ -98,6 +98,7 @@ class HomeFragment : Fragment() {
     private fun  showNotif(){
         homeViewModel.setNotif()
         homeViewModel.getNotif().observe(viewLifecycleOwner,{data->
+            showLoading(false)
             binding.rvNotif.setHasFixedSize(true)
             binding.rvNotif.layoutManager=LinearLayoutManager(context)
             notifListAdapter = NotifListAdapter(data)
@@ -105,6 +106,7 @@ class HomeFragment : Fragment() {
 
             notifListAdapter.setOnItemClickCallback(object :NotifListAdapter.OnItemClickCallback{
                 override fun onItemClicked(data: Notif) {
+
                     Log.d("showNotif", data.toString())
                     Toast.makeText(context, data.title, Toast.LENGTH_SHORT).show()
                     val intent= Intent(context, NotifDetailActivity::class.java)
@@ -115,7 +117,13 @@ class HomeFragment : Fragment() {
         })
 
     }
-
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
+    }
     private fun getListMenu(): ArrayList<ListMenu> {
         val listMenu= ArrayList<ListMenu>()
         dataTitle = resources.getStringArray(R.array.data_title)

@@ -33,6 +33,7 @@ class HalamanPertama : Fragment() {
 
         view.btn_skip.setOnClickListener {
             startActivity(Intent(activity, LoginActivity::class.java))
+            activity?.finish()
         }
     }
 }

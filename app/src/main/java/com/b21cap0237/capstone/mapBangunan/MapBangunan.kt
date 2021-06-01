@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
@@ -16,6 +17,7 @@ import com.b21cap0237.capstone.mapBangunan.model.Bangunan
 import com.b21cap0237.capstone.mapBangunan.model.Kerusakan
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestBuilder
+import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
 import com.davemorrissey.labs.subscaleview.ImageSource
@@ -23,6 +25,7 @@ import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView.SCALE_TYPE_CUSTOM
 import java.io.File
+import java.net.URL
 
 
 class MapBangunan : AppCompatActivity() {
@@ -58,12 +61,34 @@ class MapBangunan : AppCompatActivity() {
         gambarBefore=data.gambarBefore
         supportActionBar?.title=namaKelurahan
         showImage(gambarBefore)
+        showLegend()
+        btnBencana()
     }
-
+    private fun btnBencana(){
+        binding.before.setOnClickListener {
+            showImage(gambarBefore)
+        }
+        binding.after.setOnClickListener {
+            showImage(gambarAfter)
+        }
+    }
+    private fun showLegend(){
+        Glide.with(this)
+            .load("https://firebasestorage.googleapis.com/v0/b/capstone-ba4d7.appspot.com/o/legend_hijau.png?alt=media&token=61884031-10eb-4203-9e7f-6a909b0531eb")
+            .apply(RequestOptions().override(155,155))
+            .into(binding.hijau)
+        Glide.with(this)
+            .load("https://firebasestorage.googleapis.com/v0/b/capstone-ba4d7.appspot.com/o/legend_merah.png?alt=media&token=8048be28-5276-4983-9ea9-d9325b8d5eeb")
+            .apply(RequestOptions().override(155,155))
+            .into(binding.merah)
+    }
     private fun showImage(url:String){
         val uri= Uri.parse(url)
         Glide.with(this)
             .download(uri)
+            .apply(
+                RequestOptions.placeholderOf(circularProgressDrawable)
+                    .error(R.drawable.ic_error))
             .into(object : SimpleTarget<File?>() {
                 override fun onLoadFailed(@Nullable errorDrawable: Drawable?) {
                     super.onLoadFailed(errorDrawable)
@@ -71,6 +96,7 @@ class MapBangunan : AppCompatActivity() {
                 }
 
                 override fun onResourceReady(resource: File, transition: Transition<in File?>?) {
+                    showLoading(false)
                     binding.imgMap.setImage(ImageSource.uri(resource.absolutePath))
                     binding.imgMap.maxScale = 10f;
                     binding.imgMap.setMinimumScaleType(SCALE_TYPE_CENTER_CROP)
@@ -78,27 +104,23 @@ class MapBangunan : AppCompatActivity() {
             })
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater=menuInflater
-        inflater.inflate(R.menu.menu_utama,menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.before -> {
-                showImage(gambarBefore)
-                true
-            }
-            R.id.after -> {
-                showImage(gambarAfter)
-                true
-            }
-
             16908332->{
                 this.finish()
                 true
             }
             else -> true
+        }
+    }
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
         }
     }
 }

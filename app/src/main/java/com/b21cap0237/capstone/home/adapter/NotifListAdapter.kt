@@ -3,6 +3,8 @@ package com.b21cap0237.capstone.home.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.ItemMenuBinding
 import com.b21cap0237.capstone.databinding.ItemNotifBinding
 import com.b21cap0237.capstone.home.model.ListMenu
@@ -20,11 +22,16 @@ class NotifListAdapter(private val ListNotif: ArrayList<Notif>): RecyclerView.Ad
     }
     inner class ListViewHolder(private val binding: ItemNotifBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(notif: Notif){
+            val circularProgressDrawable = CircularProgressDrawable(itemView.context)
+            circularProgressDrawable.strokeWidth = 5f
+            circularProgressDrawable.centerRadius = 30f
+            circularProgressDrawable.start()
             with(binding){
                 imgNotif?.let {
                     Glide.with(itemView.context)
                         .load(notif.imgUrl)
-                        .apply(RequestOptions().override(155,155))
+                        .apply( RequestOptions.placeholderOf(circularProgressDrawable)
+                            .error(R.drawable.ic_error)).override(155,155)
                         .into(it)
                 }
                 tvTitleNotif.text=notif.title
