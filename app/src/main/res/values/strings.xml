@@ -207,4 +207,5 @@ But I must explain to you how all this mistaken idea of denouncing pleasure and 
     <string name="daerah_sekitar">Daerah Sekitar</string>
     <string name="dapat_dilalui">Dapat Dilalui</string>
     <string name="tidak_dapat_dilalui">Tidak Dapat Dilalui</string>
+    <string name="title_activity_kondisi_detail">ScrollingActivity</string>
 </resources>

@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.b21cap0237.capstone.akun.AkunFragment
 import com.b21cap0237.capstone.databinding.ActivityMainBinding
 import com.b21cap0237.capstone.home.HomeFragment
-import com.b21cap0237.capstone.kondisiLapangan.KondisiLapFragment
+import com.b21cap0237.capstone.kondisiLapangan.fragment.KondisiLapFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

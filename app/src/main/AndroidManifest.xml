@@ -16,9 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".kondisiLapangan.KondisiDetailActivity"
+            android:label="@string/title_activity_kondisi_detail"
+            android:theme="@style/Theme.MyApplication.NoActionBar"></activity>
+        <activity
             android:name=".notif.NotifDetailActivity"
             android:label="@string/title_activity_notif_detail"
-            android:theme="@style/Theme.MyApplication.NoActionBar"></activity>
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity android:name=".mapJalur.ListJalurActivity" />
         <activity android:name=".mapBangunan.ListBangunanActivity" />
         <activity android:name=".akun.AccountActivity" />
