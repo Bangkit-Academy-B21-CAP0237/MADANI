@@ -9,6 +9,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentFormProfilBinding
@@ -32,7 +33,7 @@ class FormProfilFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         profilBinding = FragmentFormProfilBinding.bind(view)
-
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val spinner = profilBinding.edtInstansi
         context?.let {
             ArrayAdapter.createFromResource(
@@ -61,6 +62,17 @@ class FormProfilFragment : Fragment() {
         if (resultCode == Activity.RESULT_OK && requestCode == pickImage) {
             imageUri = data?.data
             profilBinding.imgProfil.setImageURI(imageUri)
+        }
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+
+            16908332->{
+                true
+            }
+            else -> true
         }
     }
 }

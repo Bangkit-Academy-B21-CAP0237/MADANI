@@ -2,10 +2,9 @@ package com.b21cap0237.capstone.akun
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentAkunBinding
@@ -58,5 +57,6 @@ class AkunFragment : Fragment() {
             }
         }
     }
+
 
 }

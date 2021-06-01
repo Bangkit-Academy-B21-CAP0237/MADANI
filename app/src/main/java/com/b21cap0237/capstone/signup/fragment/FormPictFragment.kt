@@ -45,6 +45,7 @@ class FormPictFragment : Fragment() {
         }
         binding.btnSubmit.setOnClickListener {
             startActivity(Intent(context,LoginActivity::class.java))
+            activity?.finish()
         }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

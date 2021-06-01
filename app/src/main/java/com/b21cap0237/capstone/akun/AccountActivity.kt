@@ -18,7 +18,7 @@ class AccountActivity : AppCompatActivity() {
         setContentView(accountBinding.root)
 
         supportActionBar?.title=getString(R.string.hal_profile)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         val fragmentManager = supportFragmentManager
         val akunFragment = AkunFragment()
@@ -34,18 +34,5 @@ class AccountActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-
-            16908332->{
-                this.finish()
-                true
-            }
-            else -> true
-        }
-    }
 }
