@@ -39,7 +39,6 @@ class FormPassFragment : Fragment() {
             Toast.makeText(context, "Perubahan tersimpan", Toast.LENGTH_SHORT).show()
         }
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 

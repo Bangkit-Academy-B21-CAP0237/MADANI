@@ -73,7 +73,6 @@ class FormProfilFragment : Fragment() {
             profilBinding.imgProfil.setImageURI(imageUri)
         }
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
 
