@@ -20,6 +20,8 @@ But I must explain to you how all this mistaken idea of denouncing pleasure and 
     <string name="edit_profile">Edit Profile</string>
     <string name="edit_password">Password</string>
     <string name="hal_profile">Profil</string>
+    <string name="hal_lap">Kondisi Lapangan</string>
+    <string name="hal_dash">Dashboard</string>
     <string-array name="content">
         <item>@string/dummy_content</item>
         <item>@string/dummy_content</item>

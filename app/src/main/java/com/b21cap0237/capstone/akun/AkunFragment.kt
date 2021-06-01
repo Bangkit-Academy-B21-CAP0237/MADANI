@@ -2,8 +2,11 @@ package com.b21cap0237.capstone.akun
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.*
 import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
@@ -21,6 +24,8 @@ class AkunFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.hal_profile)
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_akun, container, false)
     }
@@ -57,6 +62,4 @@ class AkunFragment : Fragment() {
             }
         }
     }
-
-
 }

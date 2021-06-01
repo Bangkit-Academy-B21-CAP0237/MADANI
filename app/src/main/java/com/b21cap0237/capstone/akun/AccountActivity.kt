@@ -18,7 +18,7 @@ class AccountActivity : AppCompatActivity() {
         setContentView(accountBinding.root)
 
         supportActionBar?.title=getString(R.string.hal_profile)
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         val fragmentManager = supportFragmentManager
         val akunFragment = AkunFragment()
@@ -34,5 +34,14 @@ class AccountActivity : AppCompatActivity() {
         transaction.commit()
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
 
+            16908332->{
+                this.onBackPressed()
+                false
+            }
+            else -> true
+        }
+    }
 }
