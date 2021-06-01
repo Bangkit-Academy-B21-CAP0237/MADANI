@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.b21cap0237.capstone.SplashFragment"
+        android:name="com.b21cap0237.capstone.splashscreen.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action

@@ -7,10 +7,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.b21cap0237.capstone.infodetail.model.InfoDetail
 import com.b21cap0237.capstone.kondisiLapangan.model.Kondisi
+import com.b21cap0237.capstone.splashscreen.Splash
 import com.google.firebase.firestore.FirebaseFirestore
 
 class InfoViewModel:ViewModel() {
     val listInfoDetail = MutableLiveData<ArrayList<InfoDetail>>()
+    val listSplash = MutableLiveData<ArrayList<Splash>>()
     fun setInfoDetail(){
         val listItems = ArrayList<InfoDetail>()
         val db = FirebaseFirestore.getInstance()
@@ -41,7 +43,36 @@ class InfoViewModel:ViewModel() {
             }
 
     }
+
+    fun setSplash(){
+        val listItems = ArrayList<Splash>()
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("splashscreen")
+            .get()
+            .addOnCompleteListener { task ->
+                Log.d("Splash", "Suksess")
+                Log.d("Splash", task.result.toString())
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        val background=document["background"].toString()
+                        val kondisi= Splash(
+                            background
+                        )
+                        listItems.add(kondisi)
+                    }
+                    Log.d("Splash", listItems.toString())
+                    listSplash.postValue(listItems)
+                } else {
+                    Log.w(ContentValues.TAG, "Splash", task.exception)
+                }
+            }
+
+    }
     fun getKondisi(): LiveData<ArrayList<InfoDetail>> {
         return listInfoDetail
+    }
+    fun getSplash(): LiveData<ArrayList<Splash>> {
+        return listSplash
     }
 }
