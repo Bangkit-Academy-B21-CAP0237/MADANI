@@ -31,7 +31,7 @@ class NotifListAdapter(private val ListNotif: ArrayList<Notif>): RecyclerView.Ad
                     Glide.with(itemView.context)
                         .load(notif.imgUrl)
                         .apply( RequestOptions.placeholderOf(circularProgressDrawable)
-                            .error(R.drawable.ic_error)).override(155,155)
+                            .error(R.drawable.ic_error))
                         .into(it)
                 }
 

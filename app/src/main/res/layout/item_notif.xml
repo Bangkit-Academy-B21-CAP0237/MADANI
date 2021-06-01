@@ -37,6 +37,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/tv_title_notif"
@@ -74,7 +75,7 @@
             android:layout_marginTop="@dimen/m_4"
             android:background="@drawable/bg_radius_img"
             android:foreground="@drawable/bg_radius_img"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/banjir"
              />
     </androidx.cardview.widget.CardView>
