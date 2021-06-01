@@ -65,6 +65,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding= FragmentHomeBinding.bind(view)
+        homeViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(HomeViewModel::class.java)
+        showMenu()
+        showNotif()
+    }
+    private  fun showMenu(){
         rvMenu=binding.rvMenu
         rvMenu.setHasFixedSize(true)
         rvMenu.layoutManager = GridLayoutManager(context,3)
@@ -72,7 +77,7 @@ class HomeFragment : Fragment() {
         list.addAll(getListMenu())
         rvMenu.adapter = menuListAdapter
 
-        homeViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(HomeViewModel::class.java)
+
         menuListAdapter.setOnItemClickCallback(object :MenuListAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ListMenu) {
                 when(data.title){
@@ -84,19 +89,13 @@ class HomeFragment : Fragment() {
                         Toast.makeText(context, getString(R.string.jalur_cepat), Toast.LENGTH_SHORT).show()
                         startActivity(Intent(context, ListJalurActivity::class.java))
                     }
-                    getString(R.string.lapor)->{
-                        Toast.makeText(context, getString(R.string.lapor), Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(context, LaporActivity::class.java))
-                    }
-                    getString(R.string.info_detail)->{
+                    getString(R.string.info_aplikasi)->{
                         Toast.makeText(context, getString(R.string.info_detail), Toast.LENGTH_SHORT).show()
                         startActivity(Intent(context, InfoDetailActivity::class.java))
                     }
                 }
             }
         })
-
-        showNotif()
     }
     private fun  showNotif(){
         homeViewModel.setNotif()
