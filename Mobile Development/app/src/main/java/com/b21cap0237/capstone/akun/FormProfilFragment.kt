@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.MainActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentFormProfilBinding
-import kotlinx.android.synthetic.main.fragment_halaman_ketiga.*
+
 
 
 class FormProfilFragment : Fragment() {

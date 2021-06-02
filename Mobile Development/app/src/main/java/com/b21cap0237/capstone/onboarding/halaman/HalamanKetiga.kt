@@ -8,18 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.b21cap0237.capstone.R
-import kotlinx.android.synthetic.main.fragment_halaman_ketiga.view.*
+import com.b21cap0237.capstone.databinding.FragmentHalamanKeduaBinding
+import com.b21cap0237.capstone.databinding.FragmentHalamanKetigaBinding
+import com.b21cap0237.capstone.databinding.FragmentViewPagerBinding
 
 class HalamanKetiga : Fragment() {
-
+    private lateinit var binding: FragmentHalamanKetigaBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_halaman_ketiga, container, false)
-
-        view.finish.setOnClickListener {
+        binding= FragmentHalamanKetigaBinding.bind(view)
+        binding.finish.setOnClickListener {
             findNavController().navigate(R.id.action_viewPagerFragment_to_loginFragment)
             onBoardingFinished()
         }

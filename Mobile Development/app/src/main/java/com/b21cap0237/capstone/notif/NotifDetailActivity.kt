@@ -4,11 +4,9 @@ import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import androidx.annotation.Nullable
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.R
@@ -17,10 +15,7 @@ import com.b21cap0237.capstone.databinding.ContentScrollingBinding
 import com.b21cap0237.capstone.home.model.Notif
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import kotlinx.android.synthetic.main.content_scrolling.view.*
-import java.io.File
 
 
 class NotifDetailActivity : AppCompatActivity() {

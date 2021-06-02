@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.b21cap0237.capstone.R
 import com.b21cap0237.capstone.databinding.FragmentFormPassBinding
-import kotlinx.android.synthetic.main.fragment_halaman_ketiga.*
+
 
 class FormPassFragment : Fragment() {
 

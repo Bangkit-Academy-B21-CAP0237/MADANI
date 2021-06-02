@@ -67,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/m_4"
                         android:layout_gravity="center_vertical"
-                        android:text="Bangunan Rusak"/>
+                        android:text="@string/bangunan_tidak_rusak"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"

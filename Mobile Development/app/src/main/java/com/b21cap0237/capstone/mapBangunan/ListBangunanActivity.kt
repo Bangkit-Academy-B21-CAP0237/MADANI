@@ -16,6 +16,7 @@ import com.b21cap0237.capstone.mapBangunan.MapBangunan.Companion.EXTRA_BANGUNAN
 import com.b21cap0237.capstone.mapBangunan.adapter.KelurahanBangunanAdapter
 import com.b21cap0237.capstone.mapBangunan.model.Bangunan
 import com.b21cap0237.capstone.mapBangunan.viewmodel.BangunanViewModel
+import com.b21cap0237.capstone.response.DistrictDataItem
 import com.bumptech.glide.Glide
 
 class ListBangunanActivity : AppCompatActivity() {
@@ -31,21 +32,21 @@ class ListBangunanActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         bangunanViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(BangunanViewModel::class.java)
-        bangunanViewModel.setBangunan()
+        bangunanViewModel.setDistrict()
         listKelurahan()
     }
     fun listKelurahan(){
         binding.rvBangunan.setHasFixedSize(true)
         binding.rvBangunan.layoutManager=LinearLayoutManager(this)
 
-        bangunanViewModel.getBangunan().observe(this,{items->
+        bangunanViewModel.getDistrict().observe(this,{items->
             showLoading(false)
             kelurahanBangunanAdapter=KelurahanBangunanAdapter(items)
             binding.rvBangunan.adapter=kelurahanBangunanAdapter
 
             kelurahanBangunanAdapter.setOnItemClickCallback(object :KelurahanBangunanAdapter.OnItemClickCallback{
-                override fun onItemClicked(data: Bangunan) {
-                    Toast.makeText(this@ListBangunanActivity, data.namaKelurahan, Toast.LENGTH_SHORT).show()
+                override fun onItemClicked(data: DistrictDataItem) {
+                    Toast.makeText(this@ListBangunanActivity, data.name, Toast.LENGTH_SHORT).show()
                     val intent= Intent(this@ListBangunanActivity, MapBangunan::class.java)
                     intent.putExtra(EXTRA_BANGUNAN,data)
                     startActivity(intent)
