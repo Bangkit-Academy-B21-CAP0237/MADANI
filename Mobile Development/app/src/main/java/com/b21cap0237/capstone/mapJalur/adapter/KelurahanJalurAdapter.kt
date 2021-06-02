@@ -7,17 +7,18 @@ import com.b21cap0237.capstone.databinding.ItemBangunanBinding
 import com.b21cap0237.capstone.mapBangunan.adapter.KelurahanBangunanAdapter
 import com.b21cap0237.capstone.mapBangunan.model.Bangunan
 import com.b21cap0237.capstone.mapJalur.model.Jalur
+import com.b21cap0237.capstone.response.DistrictDataItem
 
-class KelurahanJalurAdapter(private val ListJalur: ArrayList<Jalur>): RecyclerView.Adapter<KelurahanJalurAdapter.ListViewHolder>() {
+class KelurahanJalurAdapter(private val ListJalur: List<DistrictDataItem>): RecyclerView.Adapter<KelurahanJalurAdapter.ListViewHolder>() {
     private var onItemClickCallback: KelurahanJalurAdapter.OnItemClickCallback? = null
 
     fun setOnItemClickCallback(onItemClickCallback: KelurahanJalurAdapter.OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
     inner class ListViewHolder(private val binding: ItemBangunanBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(jalur: Jalur){
+        fun bind(jalur: DistrictDataItem){
             with(binding){
-                kelurahan.text=jalur.namaKelurahan
+                kelurahan.text=jalur.name
                 itemView.setOnClickListener{
                     onItemClickCallback?.onItemClicked(jalur)
                 }
@@ -38,6 +39,6 @@ class KelurahanJalurAdapter(private val ListJalur: ArrayList<Jalur>): RecyclerVi
         return ListJalur.size
     }
     interface OnItemClickCallback {
-        fun onItemClicked(data: Jalur)
+        fun onItemClicked(data: DistrictDataItem)
     }
 }

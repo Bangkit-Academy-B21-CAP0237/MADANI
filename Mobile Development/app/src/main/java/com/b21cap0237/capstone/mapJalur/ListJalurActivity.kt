@@ -20,6 +20,7 @@ import com.b21cap0237.capstone.mapJalur.MapJalurActivity.Companion.EXTRA_JALUR
 import com.b21cap0237.capstone.mapJalur.adapter.KelurahanJalurAdapter
 import com.b21cap0237.capstone.mapJalur.model.Jalur
 import com.b21cap0237.capstone.mapJalur.viewmodel.JalurViewModel
+import com.b21cap0237.capstone.response.DistrictDataItem
 
 class ListJalurActivity : AppCompatActivity() {
     private lateinit var jalurViewModel: JalurViewModel
@@ -34,7 +35,7 @@ class ListJalurActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         jalurViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(JalurViewModel::class.java)
-        jalurViewModel.setJalur()
+        jalurViewModel.setDistrict()
         listKelurahan()
     }
 
@@ -42,14 +43,13 @@ class ListJalurActivity : AppCompatActivity() {
         binding.rvjalur.setHasFixedSize(true)
         binding.rvjalur.layoutManager= LinearLayoutManager(this)
 
-        jalurViewModel.getJalur().observe(this,{items->
+        jalurViewModel.getDistrict().observe(this,{items->
             showLoading(false)
             kelurahanJalurAdapter=KelurahanJalurAdapter(items)
             binding.rvjalur.adapter=kelurahanJalurAdapter
             kelurahanJalurAdapter.setOnItemClickCallback(object :KelurahanJalurAdapter.OnItemClickCallback{
-
-                override fun onItemClicked(data: Jalur) {
-                    Toast.makeText(this@ListJalurActivity, data.namaKelurahan, Toast.LENGTH_SHORT).show()
+                override fun onItemClicked(data: DistrictDataItem) {
+                    Toast.makeText(this@ListJalurActivity, data.name, Toast.LENGTH_SHORT).show()
                     val intent= Intent(this@ListJalurActivity, MapJalurActivity::class.java)
                     intent.putExtra(EXTRA_JALUR,data)
                     startActivity(intent)

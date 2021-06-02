@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.annotation.Nullable
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.b21cap0237.capstone.R
@@ -19,7 +20,10 @@ import com.b21cap0237.capstone.mapBangunan.MapBangunan
 import com.b21cap0237.capstone.mapBangunan.adapter.KerusakanListAdapter
 import com.b21cap0237.capstone.mapBangunan.model.Bangunan
 import com.b21cap0237.capstone.mapBangunan.model.Kerusakan
+import com.b21cap0237.capstone.mapBangunan.viewmodel.BangunanViewModel
 import com.b21cap0237.capstone.mapJalur.model.Jalur
+import com.b21cap0237.capstone.mapJalur.viewmodel.JalurViewModel
+import com.b21cap0237.capstone.response.DistrictDataItem
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
@@ -34,8 +38,12 @@ class MapJalurActivity : AppCompatActivity() {
 
     }
     private lateinit var binding: ActivityMapJalurBinding
-    private lateinit var idJalur: String
-    private lateinit var namaKelurahan:String
+    private lateinit var jalurViewModel: JalurViewModel
+    private var idJalur: Int = 0
+    private var idAfter: Int = 0
+    private var idBefore: Int = 0
+    private var idTotal: Int = 0
+    private lateinit var namaKelurahan: String
     private lateinit var gambarAfter:String
     private lateinit var gambarBefore:String
     private lateinit var circularProgressDrawable: CircularProgressDrawable
@@ -46,30 +54,81 @@ class MapJalurActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        jalurViewModel= ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(JalurViewModel::class.java)
         circularProgressDrawable = CircularProgressDrawable(this)
         circularProgressDrawable.strokeWidth = 5f
         circularProgressDrawable.centerRadius = 30f
         circularProgressDrawable.start()
 
-        val data=intent.getParcelableExtra<Jalur>(EXTRA_JALUR) as Jalur
-        idJalur=data.idJalur
-        namaKelurahan=data.namaKelurahan
-        gambarAfter=data.gambarAfter
-        gambarBefore=data.gambarBefore
+        val data=intent.getParcelableExtra<DistrictDataItem>(EXTRA_JALUR) as DistrictDataItem
+        idJalur=data.mapId!!
+        namaKelurahan=data.name.toString()
+        idTotal=idJalur*2
+        idAfter=idTotal-1
+        idBefore=idTotal
         supportActionBar?.title=namaKelurahan
-        showImage(gambarBefore)
+        showImageBefore()
         btnBencana()
         showLegend()
     }
 
     private fun btnBencana(){
         binding.before.setOnClickListener {
-            showImage(gambarBefore)
+            showImageBefore()
         }
         binding.after.setOnClickListener {
-            showImage(gambarAfter)
+            showImageAfter()
         }
+    }
+    private fun showImageAfter() {
+        showLoading(true)
+        jalurViewModel.setJalurById(idAfter)
+        jalurViewModel.getJalurById().observe(this,{data->
+            val uri= Uri.parse(data[0].photo)
+            Glide.with(this)
+                .download(uri)
+                .apply(
+                    RequestOptions.placeholderOf(circularProgressDrawable)
+                        .error(R.drawable.ic_error))
+                .into(object : SimpleTarget<File?>() {
+                    override fun onLoadFailed(@Nullable errorDrawable: Drawable?) {
+                        super.onLoadFailed(errorDrawable)
+                        Log.d("load failed", "nothing")
+                    }
+
+                    override fun onResourceReady(resource: File, transition: Transition<in File?>?) {
+                        showLoading(false)
+                        binding.imgMap.setImage(ImageSource.uri(resource.absolutePath))
+                        binding.imgMap.maxScale = 10f;
+                        binding.imgMap.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP)
+                    }
+                })
+        })
+    }
+    private fun showImageBefore(){
+        showLoading(true)
+        jalurViewModel.setJalurById(idBefore)
+        jalurViewModel.getJalurById().observe(this,{data->
+            val uri= Uri.parse(data[0].photo)
+            Glide.with(this)
+                .download(uri)
+                .apply(
+                    RequestOptions.placeholderOf(circularProgressDrawable)
+                        .error(R.drawable.ic_error))
+                .into(object : SimpleTarget<File?>() {
+                    override fun onLoadFailed(@Nullable errorDrawable: Drawable?) {
+                        super.onLoadFailed(errorDrawable)
+                        Log.d("load failed", "nothing")
+                    }
+
+                    override fun onResourceReady(resource: File, transition: Transition<in File?>?) {
+                        showLoading(false)
+                        binding.imgMap.setImage(ImageSource.uri(resource.absolutePath))
+                        binding.imgMap.maxScale = 10f;
+                        binding.imgMap.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP)
+                    }
+                })
+        })
     }
     private fun showLegend(){
         Glide.with(this)
@@ -82,8 +141,6 @@ class MapJalurActivity : AppCompatActivity() {
             .into(binding.black)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater=menuInflater
-        inflater.inflate(R.menu.menu_utama,menu)
         return super.onCreateOptionsMenu(menu)
     }
     private fun showImage(url:String){
@@ -109,15 +166,6 @@ class MapJalurActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.before -> {
-                showImage(gambarBefore)
-                true
-            }
-            R.id.after -> {
-                showImage(gambarAfter)
-                true
-            }
-
             16908332->{
                 this.finish()
                 true
