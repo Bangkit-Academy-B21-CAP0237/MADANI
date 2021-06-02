@@ -62,7 +62,7 @@ class SplashFragment : Fragment() {
                 }else{
                     findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
                 }
-            },5000)
+            },3000)
         })
     }
     private fun showLoading(state: Boolean) {
