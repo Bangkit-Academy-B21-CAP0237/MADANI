@@ -17,6 +17,7 @@ class CreateDirectionTable extends Migration
             $table->id();
             $table->integer('map_id');
             $table->enum('status', ['before', 'after']);
+            $table->string('photo');
             $table->timestamps();
         });
     }
