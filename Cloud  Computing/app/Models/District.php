@@ -10,7 +10,7 @@ class District extends Model
 {
     use HasFactory, PimpableTrait;
 
-    public $searchable = ['*'];
+    public $searchable = ['map_id', 'name', 'photo'];
     public $sortable = ['*'];
     protected $withable = ['*'];
 

@@ -10,7 +10,7 @@ class Map extends Model
 {
     use HasFactory, PimpableTrait;
 
-    public $searchable = ['*'];
+    public $searchable = ['area', 'status', 'photo'];
     public $sortable = ['*'];
     protected $withable = ['*'];
 

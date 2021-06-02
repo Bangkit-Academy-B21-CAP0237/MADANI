@@ -16,7 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Post::pimp()->paginate();
+        $limit = request()->limit ?? 15;
+        return Post::pimp()->paginate($limit);
     }
 
     /**

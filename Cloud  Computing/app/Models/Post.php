@@ -10,7 +10,7 @@ class Post extends Model
 {
     use HasFactory, PimpableTrait;
 
-    public $searchable = ['*'];
+    public $searchable = ['name'];
     public $sortable = ['*'];
     protected $withable = ['*'];
 

@@ -16,7 +16,8 @@ class DistrictController extends Controller
      */
     public function index()
     {
-        return District::pimp()->paginate();
+        $limit = request()->limit ?? 15;
+        return District::pimp()->paginate($limit);
     }
 
     /**

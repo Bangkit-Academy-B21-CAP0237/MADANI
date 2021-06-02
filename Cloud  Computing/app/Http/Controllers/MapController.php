@@ -16,7 +16,8 @@ class MapController extends Controller
      */
     public function index()
     {
-        return Map::pimp()->paginate();
+        $limit = request()->limit ?? 15;
+        return Map::pimp()->paginate($limit);
     }
 
     /**

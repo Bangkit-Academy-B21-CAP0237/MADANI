@@ -10,7 +10,7 @@ class Direction extends Model
 {
     use HasFactory, PimpableTrait;
 
-    public $searchable = ['*'];
+    public $searchable = ['map_id', 'status'];
     public $sortable = ['*'];
     protected $withable = ['*'];
 

@@ -10,7 +10,7 @@ class Report extends Model
 {
     use HasFactory, PimpableTrait;
 
-    public $searchable = ['*'];
+    public $searchable = ['user_id', 'map_id', 'title', 'description', 'address', 'category', 'photo', 'status'];
     public $sortable = ['*'];
     protected $withable = ['*'];
 

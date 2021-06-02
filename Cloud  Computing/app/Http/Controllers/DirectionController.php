@@ -16,7 +16,8 @@ class DirectionController extends Controller
      */
     public function index()
     {
-        return Direction::pimp()->paginate();
+        $limit = request()->limit ?? 15;
+        return Direction::pimp()->paginate($limit);
     }
 
     /**

@@ -16,7 +16,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        return Report::pimp()->paginate();
+        $limit = request()->limit ?? 15;
+        return Report::pimp()->paginate($limit);
     }
 
     /**
