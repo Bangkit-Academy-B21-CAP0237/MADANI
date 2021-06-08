@@ -18,7 +18,7 @@ We use the Palu 2018 tsunami disaster satellite data provided by xBD which can b
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Detection%20Preprocessing.jpg" alt = "Crop Building Image" width="500"/>
 
-The image that will be used for training is a polygon image that has been extracted from a complete satellite image. After do some extraction process, then we generate a csv file with polygon ID and it's corresponding damage labels. We will use this csv later to input data into the model using [flow_from_dataframe](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_dataframe)
+The image that will be used for training is a polygon image that has been extracted from a complete satellite image. After do some extraction process, then we generate a csv file with polygon ID and it's corresponding damage labels. We will use this csv later to input data into the model using [flow_from_dataframe](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_dataframe).  We will apply multiple augmentations to our training data for all polygon images such as ; horizontal flip, vertical flip, rotation, width and height shift. We resize our input images to 128x128, this number is not too small to cause loss of necessary information, but not too large to cause our CNN performance slowed down.
 
 ###### Undersampling
 
@@ -28,16 +28,17 @@ There is an imbalance number of classes in the 2018 Palu tsunami dataset. We hav
 
 ###### Model
 
+We create a Keras Model with the [Sequential](https://www.tensorflow.org/api_docs/python/tf/keras/Sequential) linear stack of layers. All Convolutional blocks will use ReLU for the activation parameter, We call [Flatten](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Flatten) method to transform 3 dimensional feature maps into 1 dimensional tensor.
+
 <details>
-<summary>Model Plot</summary>
+<summary>CNN Architecture</summary>
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Plot%20Model.png" alt = "Model Plot 00"/>
 </details>
+
 
 ### Road Extraction
 
 #### Dataset
 This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset). DeepGlobe Challenge provided us with images that paired with labels. The image itself is a satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background.
 
-We only use the 500 images and labels from training dataset and later will split the validation dataset in the model training.
-
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/63eb2e32c6ea940068ce1f5a267b8e26b75ad955/Machine%20Learning/Media/Road%20Extraction%20Dataset.png" alt="Road Extraction Dataset" width="500"/>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/dda4af5a98de598b235db9e1cb2b79a60f3695dd/Machine%20Learning/Media/Road%20Extraction%20Dataset.png" alt="Road Extraction Dataset" width="500"/>
