@@ -74,3 +74,58 @@ We will not use anymore modification (yet) such as augmentation because we need 
 <summary>Model Accuracy</summary>
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Road%20Extraction%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
 </details>
+## Mobile Development
+
+### Feature
+
+- Onboarding Screen
+
+![Mobile%Development/Media/Slide2.png](Mobile%Development/Mobile Development/Media/Slide2.png)
+
+- Splash Screen
+
+![Mobile Development/Media/Slide1.png](Mobile%Development/Mobile Development/Media/Slide1.png)
+
+- Login
+
+![Mobile%Development/Media/Slide2%201.png](Mobile%Development/Media/Slide2 1.png)
+
+- Sign Up
+
+![Mobile%Development/Media/Slide3.png](D:/BANGKIT/Capstone/Git Master Capstone/MADANI/Mobile Development/Mobile Development/Media/Slide3.png)
+
+- Detection Of Damaged Buildings After Disaster
+
+![Mobile%Development/Media/Slide4.png](Mobile%Development/Media/Slide4.png)
+
+- Post-Disaster Road Detection
+
+![Mobile%Development/Media/Slide5.png](Mobile%Development/Mobile Development/Media/Slide5.png)
+
+- Announcement From Center
+
+![Mobile%Development/Media/Slide7.png](Mobile%Development/Mobile Development/Media/Slide7.png)
+
+- Information On The Latest Situation In The Post-Disaster Field
+
+![Mobile%Development/Media/Slide8.png](Mobile%Development/Media/Slide8.png)
+
+### Application Flow
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png)
+
+### Prototipe Application Using Adobe XD
+
+![https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png](https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png)
+
+### Built With
+
+- [Adobe XD](https://www.adobe.com/products/xd.html)
+- [Android Studio Native](https://developer.android.com/studio?gclid=Cj0KCQjwh_eFBhDZARIsALHjIKdN_DkjWIonOgxDbdueJpm-h_o4UVbMTdztmVgdcnxHzT1WV4vY3oYaAvcAEALw_wcB&gclsrc=aw.ds)
+- [Retrofit 2](https://square.github.io/retrofit/)
+- [Kotlin](https://kotlinlang.org)
+- [Firebase Storage](https://firebase.google.com/docs/storage)
+- [Firebase Firestore](https://firebase.google.com/docs/firestore)
+- [REST API MADANI](https://mapping-area.dennyalfa.com/)
+
+### Android Developer MADANI

@@ -6,39 +6,39 @@ MADANI is a user application that makes it easier for volunteers to carry out di
 
 - Onboarding Screen
 
-![Media/Slide2.png](Media/Slide2.png)
+![Mobile Development/Media/Slide2.png](Mobile Development/Media/Slide2.png)
 
 - Splash Screen
 
-![Media/Slide1.png](Media/Slide1.png)
+![Mobile Development/Media/Slide1.png](Mobile Development/Media/Slide1.png)
 
 - Login
 
-![Media/Slide2%201.png](Media/Slide2%201.png)
+![Mobile Development/Media/Slide2%201.png](Mobile Development/Media/Slide2%201.png)
 
 - Sign Up
 
-![Media/Slide3.png](Media/Slide3.png)
+![Mobile Development/Media/Slide3.png](Mobile Development/Media/Slide3.png)
 
 - Detection Of Damaged Buildings After Disaster
 
-![Media/Slide4.png](Media/Slide4.png)
+![Mobile Development/Media/Slide4.png](Mobile Development/Media/Slide4.png)
 
 - Post-Disaster Road Detection
 
-![Media/Slide5.png](Media/Slide5.png)
+![Mobile Development/Media/Slide5.png](Mobile Development/Media/Slide5.png)
 
 - Announcement From Center
 
-![Media/Slide7.png](Media/Slide7.png)
+![Mobile Development/Media/Slide7.png](Mobile Development/Media/Slide7.png)
 
 - Information On The Latest Situation In The Post-Disaster Field
 
-![Media/Slide8.png](Media/Slide8.png)
+![Mobile Development/Media/Slide8.png](Mobile Development/Media/Slide8.png)
 
 ## Application Flow
 
-![Media/Madani.png](Media/Madani.png)
+![Mobile Development/Media/Madani.png](Mobile Development/Media/Madani.png)
 
 ## Prototipe Application Using Adobe XD
 
