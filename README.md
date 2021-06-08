@@ -45,6 +45,6 @@ This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](h
 
 #### Data Preparation
 
-The images that we used to train our model is satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background. This images we used only from the training folder from you can see in the [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset) dataset and  from approximately 6000 images and labels, we only use 500 images and labels. 
+The images that we used to train our model is satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background. This images we used only from the training folder from you can see in the [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset) dataset and from approximately 6000 images and labels later split it into validation dataset in training model.
 
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/06df6f0bab4df7db2cc38e52ac58c737424be20c/Machine%20Learning/Media/Road%20Extraction%20Training%20Images.png" alt="Road Extraction Training Images" width="500"/>
+
