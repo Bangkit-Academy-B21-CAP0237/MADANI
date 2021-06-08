@@ -6,39 +6,39 @@ MADANI is a user application that makes it easier for volunteers to carry out di
 
 - Onboarding Screen
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide3.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide3.PNG)
+![Media/Slide2.png](Media/Slide2.png)
 
 - Splash Screen
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide1.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide1.PNG)
+![Media/Slide1.png](Media/Slide1.png)
 
 - Login
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide2.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide2.PNG)
+![Media/Slide2%201.png](Media/Slide2%201.png)
 
 - Sign Up
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide4.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide4.PNG)
+![Media/Slide3.png](Media/Slide3.png)
 
 - Detection Of Damaged Buildings After Disaster
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide5.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide5.PNG)
+![Media/Slide4.png](Media/Slide4.png)
 
 - Post-Disaster Road Detection
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide6.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide6.PNG)
+![Media/Slide5.png](Media/Slide5.png)
 
 - Announcement From Center
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide7.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide7.PNG)
+![Media/Slide7.png](Media/Slide7.png)
 
 - Information On The Latest Situation In The Post-Disaster Field
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide8.PNG](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Slide8.PNG)
+![Media/Slide8.png](Media/Slide8.png)
 
 ## Application Flow
 
-![http://redirectbangkit.yusrilihzamaulana.xyz/asset/Madani.png](http://redirectbangkit.yusrilihzamaulana.xyz/asset/Madani.png)
+![Media/Madani.png](Media/Madani.png)
 
 ## Prototipe Application Using Adobe XD
 
