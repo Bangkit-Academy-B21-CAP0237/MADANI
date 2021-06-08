@@ -10,4 +10,18 @@ We use xBD dataset, a dataset for assessing building damage from satellite image
 
 We use the Palu 2018 tsunami disaster satellite data provided by xBD which can be downloaded from [here](https://www.kaggle.com/auliawicaksono/palu-disaster-satellite-images). This dataset contain 226 pre and post disaster satellite imagery, with 16,764 building polygons.
 
-![](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/af2a97051daa43d2821308da5d4b1fd6cd757e01/Machine%20Learning/Media/Building%20Damage%20Classification%20Dataset.jpg)
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/af2a97051daa43d2821308da5d4b1fd6cd757e01/Machine%20Learning/Media/Building%20Damage%20Classification%20Dataset.jpg" alt="Building Damage Detection Dataset" width="500"/>
+
+#### Data Preparation
+
+###### Crop Building Image
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Detection%20Preprocessing.jpg" alt = "Crop Building Image" width="500"/>
+
+The image that will be used for training is a polygon image that has been extracted from a complete satellite image. After do some extraction process, then we generate a csv file with polygon ID and it's corresponding damage labels. We will use this csv later to input data into the model using [flow_from_dataframe](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator#flow_from_dataframe)
+
+###### Undersampling
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Undersampling.jpg" alt = "Undersampling" width="500"/>
+
+There is an imbalance in the number of classes in the 2018 Palu tsunami dataset. We have explored the model and train the model with [class weights](https://www.tensorflow.org/tutorials/structured_data/imbalanced_data#train_a_model_with_class_weights), but because the imbalance is very extreme (there is only 1 building polygon that is labeled in class 3 out of a total of 16,764 building polygons), so we decide to use an undersampling technique, a resampling method that is designed to change the composition of a training dataset for an imbalanced classification task.
