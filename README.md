@@ -83,6 +83,74 @@ We will not use anymore modification (yet) such as augmentation because we need 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Road%20Extraction%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
 </details>
 
+# CLOUD COMPUTING
+Designing architecture for cloud system and build the environment to store the resource and provide server to do the process in google cloud service. Then create a database with MySQL for organizes, integrates, and control the output from the process in server and create Rest Api with Laravel framework to simplifying communication between database and android to serve the data output 
+
+## Service
+- Google Storage
+
+Google storage is used to store all resource data either input and output. We create 2 bucket and using the url to call the object from storage.
+- AI Platform Notebook
+
+AI Platform Notebook is used as a server for running the machine learning process. It will call the model and doing image identification process with ML program.
+- Compute Instances
+
+Compute Instance is used to run MADANI server application. We used two instances for api server and for machine learning program.
+- MySql
+
+We used MySql database to organize and control the output from machine learning process.
+- Framework Laravel
+We used Laravel to build rest API service to connect database and android as a client. It's a comprehensive framework and logically structured.
+
+
+## Process Production
+
+1. Designing architecture cloud
+
+    - GCP Architecture
+
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/Arch.jpg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/Arch.jpg)
+
+2. Setup Environment
+
+    - Create Bucket
+    
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c1.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c1.png)
+    - Create VM Instances for API
+
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c2.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c2.jpeg)
+
+    - Create Notebook AI
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c3.jpg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c3.jpg)
+
+3. Create Database
+
+    - DB Eaver
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c4.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c4.jpeg)
+
+    - Database Schema
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c5.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c5.jpeg)
+
+4. Build Rest API
+
+    - Models
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c6.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c6.jpeg)
+
+    - Controller
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c7.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c7.jpeg)
+
+    - api.php
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c8.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c8.jpeg)
+
+    - POSTMAN
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c9.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c9.jpeg)
+
+    - API Server
+        ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg)
+
+5. Migrating all resource to cloud
+
+
 ## Mobile Development
 
 ### Feature
