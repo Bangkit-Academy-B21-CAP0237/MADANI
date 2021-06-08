@@ -82,6 +82,7 @@ We will not use anymore modification (yet) such as augmentation because we need 
 <summary>Model Accuracy</summary>
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Road%20Extraction%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
 </details>
+
 ## Mobile Development
 
 ### Feature
