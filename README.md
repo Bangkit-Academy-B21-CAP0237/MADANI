@@ -119,33 +119,33 @@ We used Laravel to build rest API service to connect database and android as a c
     - Create VM Instances for API
 
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c2.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c2.jpeg)
-
     - Create Notebook AI
+ 
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c3.jpg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c3.jpg)
 
 3. Create Database
-
     - DB Eaver
+    
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c4.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c4.jpeg)
-
     - Database Schema
+    
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c5.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c5.jpeg)
 
 4. Build Rest API
-
     - Models
+   
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c6.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c6.jpeg)
-
     - Controller
+ 
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c7.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c7.jpeg)
-
     - api.php
+    
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c8.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c8.jpeg)
-
     - POSTMAN
+    
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c9.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c9.jpeg)
-
     - API Server
+    
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg)
 
 5. Migrating all resource to cloud
