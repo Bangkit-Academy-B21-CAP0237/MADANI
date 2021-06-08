@@ -48,9 +48,6 @@ We create a Keras Model with the [Sequential](https://www.tensorflow.org/api_doc
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
 </details>
 
-
-
-
 ### Road Extraction
 
 #### Dataset
@@ -64,7 +61,13 @@ The images that we used to train our model is satellite imagery shot of regions 
 
 We create our own data generator for the road extraction model. First, we created two empty numpy arrays for each images and labels using [numpy.zeros](https://www.geeksforgeeks.org/numpy-zeros-python/), then we convert the satellite images and labels into arrays using [OpenCV](https://docs.opencv.org/master/) and append them into the created numpy arrays. This will make each empty numpy arrays filled with images and labels arrays.
 
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/3916dee4d59c5c7ddc4fe37a73356ce078cbd3b6/Machine%20Learning/Media/Road%20Extraction%20Data%20Prep.png" alt="Road Extraction Data Prep" width="500"/>
+#### Image Arrays
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/35318c9dde11941b138e53814c745834fcb69ff0/Machine%20Learning/Media/Road%20Extraction%20Images%20Arrays.png" alt="Road Extraction Image Arrays" width="500"/>
+
+#### Labels Arrays
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/35318c9dde11941b138e53814c745834fcb69ff0/Machine%20Learning/Media/Road%20Extraction%20Labels%20Arrays.png" alt="Road Extraction Label Arrays" width="500"/>
 
 We will not use anymore modification (yet) such as augmentation because we need to process the images and the labels as it is to mantain the preciseness.
 
