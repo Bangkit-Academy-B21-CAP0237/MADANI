@@ -137,4 +137,3 @@ We will not use anymore modification (yet) such as augmentation because we need 
 - [Firebase Firestore](https://firebase.google.com/docs/firestore)
 - [REST API MADANI](https://mapping-area.dennyalfa.com/)
 
-### Android Developer MADANI
