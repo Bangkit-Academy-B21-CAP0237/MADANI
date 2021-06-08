@@ -56,4 +56,7 @@ MADANI is a user application that makes it easier for volunteers to carry out di
 
 ## Android Developer MADANI
 
-[Untitled](https://www.notion.so/8ffb24fe21524eb5bd0165307b5e7e9f)
+| Name                     | ID Bangkit | Github                           |
+| ------------------------ | ---------- | -------------------------------- |
+| Moh Yusril Ihza Maulana  | A3322966   | https://github.com/yusrilihzaM   |
+| Mercya Salsabillah Shani | A1801839   | https://github.com/MercyaShani99 |
