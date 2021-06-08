@@ -3,19 +3,19 @@ Designing architecture for cloud system and build the environment to store the r
 
 ## Service
 - Google Storage
-<br>
+
 Google storage is used to store all resource data either input and output. We create 2 bucket and using the url to call the object from storage.
 - AI Platform Notebook
-<br>
+
 AI Platform Notebook is used as a server for running the machine learning process. It will call the model and doing image identification process with ML program.
 - Compute Instances
-<br>
+
 Compute Instance is used to run MADANI server application. We used two instances for api server and for machine learning program.
 - MySql
-<br>
+
 We used MySql database to organize and control the output from machine learning process.
 - Framework Laravel
-<br>We used Laravel to build rest API service to connect database and android as a client. It's a comprehensive framework and logically structured.
+We used Laravel to build rest API service to connect database and android as a client. It's a comprehensive framework and logically structured.
 
 
 ## Process Production
