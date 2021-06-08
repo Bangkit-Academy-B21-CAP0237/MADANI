@@ -32,3 +32,10 @@ There is an imbalance number of classes in the 2018 Palu tsunami dataset. We hav
 <summary>Model Plot</summary>
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Plot%20Model.png" alt = "Model Plot 00"/>
 </details>
+
+### Road Extraction
+
+#### Dataset
+This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset). DeepGlobe Challenge provided us with images that paired with labels. The image itself is a satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background.
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/dda4af5a98de598b235db9e1cb2b79a60f3695dd/Machine%20Learning/Media/Road%20Extraction%20Dataset.png" alt="Road Extraction Dataset" width="500"/>
