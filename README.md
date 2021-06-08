@@ -67,11 +67,16 @@ We create our own data generator for the road extraction model. First, we create
 
 ##### Labels Arrays
 
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/35318c9dde11941b138e53814c745834fcb69ff0/Machine%20Learning/Media/Road%20Extraction%20Labels%20Arrays.png" alt="Road Extraction Label Arrays" width="500"/>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/d9272f21ae78baf4b2dfb1ddca65f7d84eab7a14/Machine%20Learning/Media/ResUnet%20Architecture.png" alt="ResUnet Architecture" width="500"/>
 
 We will not use anymore modification (yet) such as augmentation because we need to process the images and the labels as it is to mantain the preciseness.
 
 ##### Model
+
+<details>
+<summary>CNN Architecture</summary>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Plot%20Model.png" alt = "Model Plot 00"/>
+</details>
 
 <details>
 <summary>Model Accuracy</summary>
