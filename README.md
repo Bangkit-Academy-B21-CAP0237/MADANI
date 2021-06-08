@@ -61,11 +61,11 @@ The images that we used to train our model is satellite imagery shot of regions 
 
 We create our own data generator for the road extraction model. First, we created two empty numpy arrays for each images and labels using [numpy.zeros](https://www.geeksforgeeks.org/numpy-zeros-python/), then we convert the satellite images and labels into arrays using [OpenCV](https://docs.opencv.org/master/) and append them into the created numpy arrays. This will make each empty numpy arrays filled with images and labels arrays.
 
-#### Image Arrays
+##### Image Arrays
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/35318c9dde11941b138e53814c745834fcb69ff0/Machine%20Learning/Media/Road%20Extraction%20Images%20Arrays.png" alt="Road Extraction Image Arrays" width="500"/>
 
-#### Labels Arrays
+##### Labels Arrays
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/35318c9dde11941b138e53814c745834fcb69ff0/Machine%20Learning/Media/Road%20Extraction%20Labels%20Arrays.png" alt="Road Extraction Label Arrays" width="500"/>
 
