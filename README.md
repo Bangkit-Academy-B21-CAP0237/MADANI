@@ -71,7 +71,7 @@ We create our own data generator for the road extraction model. First, we create
 
 We will not use anymore modification (yet) such as augmentation because we need to process the images and the labels as it is to mantain the preciseness.
 
-##### Model
+#### Model
 
 <details>
 <summary>ResUnet Architecture</summary>
