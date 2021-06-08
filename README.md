@@ -24,11 +24,11 @@ The image that will be used for training is a polygon image that has been extrac
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Undersampling.jpg" alt = "Undersampling" width="500"/>
 
-There is an imbalance in the number of classes in the 2018 Palu tsunami dataset. We have explored the model and train the model with [class weights](https://www.tensorflow.org/tutorials/structured_data/imbalanced_data#train_a_model_with_class_weights), but because the imbalance is very extreme (there is only 1 building polygon that is labeled in class 3 out of a total of 16,764 building polygons), so we decide to use an undersampling technique, a resampling method that is designed to change the composition of a training dataset for an imbalanced classification task.
+There is an imbalance number of classes in the 2018 Palu tsunami dataset. We have explored the model and train the model with [class weights](https://www.tensorflow.org/tutorials/structured_data/imbalanced_data#train_a_model_with_class_weights), but because the imbalance is very extreme (there is only 1 building polygon that is labeled in class 3 out of a total of 16,764 building polygons), so we decide to reduce the classification target from 4 classes to binary classification. We apply undersampling technique to change the composition of the training dataset because the number of buildings that has no damage and the number of destroyed buildings are imbalance.
 
-### Road Extraction
+###### Model
 
-#### Dataset
-This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset). DeepGlobe Challenge provided us with images that paired with labels. The image itself is a satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background.
-
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/dda4af5a98de598b235db9e1cb2b79a60f3695dd/Machine%20Learning/Media/Road%20Extraction%20Dataset.png" alt="Road Extraction Dataset" width="500"/>
+<details>
+<summary>Model Plot</summary>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Plot%20Model.png" alt = "Model Plot 00"/>
+</details>
