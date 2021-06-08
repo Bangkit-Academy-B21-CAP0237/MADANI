@@ -56,13 +56,11 @@ We create a Keras Model with the [Sequential](https://www.tensorflow.org/api_doc
 #### Dataset
 This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset). DeepGlobe Challenge provided us with images that paired with labels. The image itself is a satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background.
 
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/749b18eea48010fa9922bbbc654b4d47cd4fd585/Machine%20Learning/Media/Road%20Extraction%20Dataset.png" alt="Road Extraction Dataset" width="500"/>
-
-#### Data Preparation
-
 The images that we used to train our model is satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background. This images we used only from the training folder from you can see in the [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset) dataset and from approximately 6000 images and labels later split it into validation dataset in training model.
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/1b937bd4de1301c8e3f77fb4042592c82089b343/Machine%20Learning/Media/Road%20Extraction%20Training%20Imagessss.png" alt="Road Extraction Training Images" width="500"/>
+
+#### Data Preparation
 
 ##### Model
 
