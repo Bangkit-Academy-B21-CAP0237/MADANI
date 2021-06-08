@@ -1,14 +1,21 @@
 # MADANI
-Mapping and Data Assesment for Natural Incident
+> Mapping and Data Assesment for Natural Incident
+
+Madani is an application that makes it easier for volunteers to carry out disaster mitigation by classifying routes and impact buildings based on post-disaster satellite images.
+
 
 ## Machine Learning
+
+### Overview
+
+Disaster mitigation follow the processes included in the standard operational procedures according to their level of disaster. MADANI is intended to support one of these processes, mainly in estimating areas and buildings affected by disasters, as well as in determining post-disaster logistics distribution channels. To solve this problem, we propose two steps machine learning processes that can take images from satellites, detect existing roads, then identify damage of buildings.
+
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Overview.jpg" alt="Overview"/>
 
 ### Building Damage Classification
 
 #### Dataset
-We use xBD dataset, a dataset for assessing building damage from satellite imagery. xBD provides pre and post-event satellite imagery from a variety of disaster events with building polygons, classification labels for damage types, labels of damage level, and correspoinding satellite medatada. Detailed information can be found at [xView2](https://xview2.org/) site.
-
-We use the Palu 2018 tsunami disaster satellite data provided by xBD which can be downloaded from [here](https://www.kaggle.com/auliawicaksono/palu-disaster-satellite-images). This dataset contain 226 pre and post disaster satellite imagery, with 16,764 building polygons.
+We use xBD dataset, a dataset for assessing building damage from satellite imagery. xBD provides pre and post-event satellite imagery from a variety of disaster events with building polygons, classification labels for damage types, labels of damage level, and correspoinding satellite medatada. Detailed information can be found at [xView2](https://xview2.org/) site. We use the Palu 2018 tsunami disaster satellite data provided by xBD which can be downloaded from [here](https://www.kaggle.com/auliawicaksono/palu-disaster-satellite-images). This dataset contain 226 pre and post disaster satellite imagery, with 16,764 building polygons.
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/af2a97051daa43d2821308da5d4b1fd6cd757e01/Machine%20Learning/Media/Building%20Damage%20Classification%20Dataset.jpg" alt="Building Damage Detection Dataset" width="500"/>
 
@@ -26,7 +33,7 @@ The image that will be used for training is a polygon image that has been extrac
 
 There is an imbalance number of classes in the 2018 Palu tsunami dataset. We have explored the model and train the model with [class weights](https://www.tensorflow.org/tutorials/structured_data/imbalanced_data#train_a_model_with_class_weights), but because the imbalance is very extreme (there is only 1 building polygon that is labeled in class 3 out of a total of 16,764 building polygons), so we decide to reduce the classification target from 4 classes to binary classification. We apply undersampling technique to change the composition of the training dataset because the number of buildings that has no damage and the number of destroyed buildings are imbalance.
 
-###### Model
+##### Model
 
 We create a Keras Model with the [Sequential](https://www.tensorflow.org/api_docs/python/tf/keras/Sequential) linear stack of layers. All Convolutional blocks will use ReLU for the activation parameter, We call [Flatten](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Flatten) method to transform 3 dimensional feature maps into 1 dimensional tensor.
 
@@ -34,6 +41,14 @@ We create a Keras Model with the [Sequential](https://www.tensorflow.org/api_doc
 <summary>CNN Architecture</summary>
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Plot%20Model.png" alt = "Model Plot 00"/>
 </details>
+
+
+<details>
+<summary>Model Accuracy</summary>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Building%20Damage%20Classification%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
+</details>
+
+
 
 
 ### Road Extraction
@@ -48,3 +63,10 @@ This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](h
 The images that we used to train our model is satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background. This images we used only from the training folder from you can see in the [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset) dataset and from approximately 6000 images and labels later split it into validation dataset in training model.
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/1b937bd4de1301c8e3f77fb4042592c82089b343/Machine%20Learning/Media/Road%20Extraction%20Training%20Imagessss.png" alt="Road Extraction Training Images" width="500"/>
+
+##### Model
+
+<details>
+<summary>Model Accuracy</summary>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Road%20Extraction%20Model%20Accuracy.JPG" alt = "Model Accuracy width="500"/>
+</details>
