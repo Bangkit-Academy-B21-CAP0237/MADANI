@@ -88,35 +88,35 @@ We will not use anymore modification (yet) such as augmentation because we need 
 
 - Onboarding Screen
 
-![Mobile%Development/Media/Slide2.png](Mobile%Development/Mobile Development/Media/Slide2.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png)
 
 - Splash Screen
 
-![Mobile Development/Media/Slide1.png](Mobile%Development/Mobile Development/Media/Slide1.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide1.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide1.png)
 
 - Login
 
-![Mobile%Development/Media/Slide2%201.png](Mobile%Development/Media/Slide2 1.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2%201.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2 1.png)
 
 - Sign Up
 
-![Mobile%Development/Media/Slide3.png](D:/BANGKIT/Capstone/Git Master Capstone/MADANI/Mobile Development/Mobile Development/Media/Slide3.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png](Dhttps://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png)
 
 - Detection Of Damaged Buildings After Disaster
 
-![Mobile%Development/Media/Slide4.png](Mobile%Development/Media/Slide4.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png)
 
 - Post-Disaster Road Detection
 
-![Mobile%Development/Media/Slide5.png](Mobile%Development/Mobile Development/Media/Slide5.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png)
 
 - Announcement From Center
 
-![Mobile%Development/Media/Slide7.png](Mobile%Development/Mobile Development/Media/Slide7.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png)
 
 - Information On The Latest Situation In The Post-Disaster Field
 
-![Mobile%Development/Media/Slide8.png](Mobile%Development/Media/Slide8.png)
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png)
 
 ### Application Flow
 
