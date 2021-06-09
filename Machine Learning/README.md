@@ -1,5 +1,9 @@
 # Machine Learning
 
+## How to replicate our project
+
+> Read these explanation about the notebook below and follow the instruction
+
 ### 01 Data Exploration & Preparation
 
 This notebook contains the exploration process on the 2018 Palu tsunami data. The data provided by xview has additional information about the metadata of each satellite image. Additional information about the image is entered into a file with json format. We will dive into the information provided and explore from the data provided. After running this notebook you will get a csv containing train and test data.
