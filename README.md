@@ -3,12 +3,68 @@
 
 Madani is an application that makes it easier for volunteers to carry out disaster mitigation by classifying routes and impact buildings based on post-disaster satellite images.
 
+From many disasters that have occurred in Indonesia, the problem that often occurs in the disaster mitigation process is the difficulties of determining the areas and buildings affected by the disaster, and determining the logistics distribution channels needed after a disaster occurs. Manual monitoring can be done, but it will require more resources such as human and financial resources.
+
+Disaster mitigation follow the processes included in the standard operational procedures according to their level of disaster. MADANI is intended to support one of these processes, mainly in estimating areas and buildings affected by disasters, as well as in determining post-disaster logistics distribution channels.
+
+
+## Mobile Development
+
+### Feature
+
+- Onboarding Screen
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png)
+
+- Login
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2%201.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2%201.png)
+
+- Sign Up
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png)
+
+- Building Damage Detection Mapping
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png)
+
+- Road Extraction Mapping
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png)
+
+- Central Announcement
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png)
+
+- Information On The Latest Situation In The Post-Disaster Area
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png)
+
+### Application Flow
+
+![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png)
+
+### Prototype Application Using Adobe XD
+
+![https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png](https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png)
+
+### Built With
+
+- [Adobe XD](https://www.adobe.com/products/xd.html)
+- [Android Studio Native](https://developer.android.com/studio?gclid=Cj0KCQjwh_eFBhDZARIsALHjIKdN_DkjWIonOgxDbdueJpm-h_o4UVbMTdztmVgdcnxHzT1WV4vY3oYaAvcAEALw_wcB&gclsrc=aw.ds)
+- [Retrofit 2](https://square.github.io/retrofit/)
+- [Kotlin](https://kotlinlang.org)
+- [Firebase Storage](https://firebase.google.com/docs/storage)
+- [Firebase Firestore](https://firebase.google.com/docs/firestore)
+- [REST API MADANI](https://mapping-area.dennyalfa.com/)
+
 
 ## Machine Learning
 
 ### Overview
 
-Disaster mitigation follow the processes included in the standard operational procedures according to their level of disaster. MADANI is intended to support one of these processes, mainly in estimating areas and buildings affected by disasters, as well as in determining post-disaster logistics distribution channels. To solve this problem, we propose two steps machine learning processes that can take images from satellites, detect existing roads, then identify damage of buildings.
+> We create a machine learning model that can classify building damage and detect road in areas affected by natural disasters.
+
 
 <img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Overview.jpg" alt="Overview"/>
 
@@ -55,7 +111,7 @@ This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](h
 
 The images that we used to train our model is satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background. This images we used only from the training folder from you can see in the [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset) dataset and from approximately 6000 images and labels later split it into validation dataset in training model.
 
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/1b937bd4de1301c8e3f77fb4042592c82089b343/Machine%20Learning/Media/Road%20Extraction%20Training%20Imagessss.png" alt="Road Extraction Training Images" width="500"/>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Machine%20Learning/Media/Road%20Extraction%20Dataset.jpg" alt="Road Extraction Training Images" width="500"/>
 
 #### Data Preparation
 
@@ -149,59 +205,4 @@ We used Laravel to build rest API service to connect database and android as a c
         ![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Cloud%20%20Computing/c10.jpeg)
 
 5. Migrating all resource to cloud
-
-
-## Mobile Development
-
-### Feature
-
-- Onboarding Screen
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2.png)
-
-- Splash Screen
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide1.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide1.png)
-
-- Login
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2%201.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide2%201.png)
-
-- Sign Up
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide3.png)
-
-- Detection Of Damaged Buildings After Disaster
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide4.png)
-
-- Post-Disaster Road Detection
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide5.png)
-
-- Announcement From Center
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide7.png)
-
-- Information On The Latest Situation In The Post-Disaster Field
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Slide8.png)
-
-### Application Flow
-
-![https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/master/Mobile%20Development/Media/Madani.png)
-
-### Prototipe Application Using Adobe XD
-
-![https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png](https://cdn.discordapp.com/attachments/828891691670437890/849286637778108486/unknown.png)
-
-### Built With
-
-- [Adobe XD](https://www.adobe.com/products/xd.html)
-- [Android Studio Native](https://developer.android.com/studio?gclid=Cj0KCQjwh_eFBhDZARIsALHjIKdN_DkjWIonOgxDbdueJpm-h_o4UVbMTdztmVgdcnxHzT1WV4vY3oYaAvcAEALw_wcB&gclsrc=aw.ds)
-- [Retrofit 2](https://square.github.io/retrofit/)
-- [Kotlin](https://kotlinlang.org)
-- [Firebase Storage](https://firebase.google.com/docs/storage)
-- [Firebase Firestore](https://firebase.google.com/docs/firestore)
-- [REST API MADANI](https://mapping-area.dennyalfa.com/)
 
