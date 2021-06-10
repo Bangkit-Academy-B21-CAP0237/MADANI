@@ -35,6 +35,15 @@ What will this notebook do:
 
 This dataset is provided by Road Extraction Dataset from [DeepGlobe Challenge](https://www.kaggle.com/balraj98/deepglobe-road-extraction-dataset). DeepGlobe Challenge provided us with images that paired with labels. The image itself is a satellite imagery shot of regions that contain road in it. And the label mask is a grayscale image, with white standing for road pixel, and black standing for background.
 
+To run this notebook you need kaggle api file to interact with datasets to download the data. Upload your kaggle API file to '/content' directory and you will be ready to run this notebook.
+
+If you've never used the kaggle API, please follow this instruction:
+* Log in to [Kaggle](https://www.kaggle.com/). Create a new account if you don't have one.
+* Go to your account settings by clicking on the top right.
+* Scroll down to the API section.
+* Click on 'Create New API Token' button to download the token as a JSON file.
+* Upload it to '/content' directory in your colab environment.
+
 ### 04 Road Extraction - Model
 
 This notebook contains the model for our machine learning road extraction model. After you are finished with the step number [03](https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/a6d34718ee2c200338bedc71aa128446513d9c65/Machine%20Learning/03%20Road%20Extraction%20-%20Data%20Preparation%20&%20Exploration.ipynb), you can directly load the images and masks array into the model as x labels and y labels.
