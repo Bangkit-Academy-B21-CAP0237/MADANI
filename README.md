@@ -131,7 +131,7 @@ We will not use anymore modification (yet) such as augmentation because we need 
 
 <details>
 <summary>ResUnet Architecture</summary>
-<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/d9272f21ae78baf4b2dfb1ddca65f7d84eab7a14/Machine%20Learning/Media/ResUnet%20Architecture.png" alt = "ResUnet Architecture"/>
+<img src="https://github.com/Bangkit-Academy-B21-CAP0237/MADANI/blob/d034a6e5c3fb363c73c16db65fb633c3402ae49f/Machine%20Learning/Media/Residual%20UNet%20Architecture.png" alt = "ResUnet Architecture"/>
 </details>
 
 <details>
